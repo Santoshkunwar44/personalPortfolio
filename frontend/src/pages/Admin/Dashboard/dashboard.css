@@ -1,0 +1,92 @@
+.adminDashBoard {
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+}
+.admin_uploadBox {
+  width: 70%;
+  margin: 2rem auto;
+  border: 0.3px solid gainsboro;
+}
+.form_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+.form_item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 0.3px solid rgba(220, 220, 220, 0.329);
+}
+
+.form_item label {
+  text-align: start;
+  padding: 1rem;
+  color: rgb(65, 65, 65);
+  flex: 4;
+}
+.form_values {
+  flex: 8;
+  width: 100%;
+}
+.feature_box {
+  width: 100%;
+}
+.feature_item {
+  display: flex;
+  flex: 8;
+  flex-direction: column;
+}
+.currentFeatures,
+.upComming_feature {
+  display: flex;
+  padding: 1rem 0;
+  margin-bottom: 1rem;
+  border-bottom: 0.3px solid rgba(220, 220, 220, 0.329);
+  width: 100%;
+}
+.currentFeatures label,
+.upComming_feature label {
+  text-align: start;
+  padding: 1rem;
+  color: rgb(65, 65, 65);
+  flex: 4;
+}
+
+.feature_item textarea {
+  margin-bottom: 1rem;
+}
+.page_item {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+.projectPages_container {
+  display: flex;
+  flex-direction: column;
+  flex: 8;
+}
+
+.page_item input {
+  width: 100%;
+}
+.sidebar {
+  display: flex;
+  align-items: flex-start;
+
+  flex-direction: column;
+  border-right: 0.4px solid #e0e0e05e;
+  height: 100%;
+  flex: 3;
+}
+.admin_dashboard {
+  display: flex;
+  height: 100vh;
+}
+.admin_content {
+  flex: 9;
+}

@@ -1,0 +1,11 @@
+.dashboardContainer {
+  display: flex;
+  border-top: 0.3px solid #cbcbcb63;
+  margin-top: 70px;
+}
+.projectRight {
+  flex: 11;
+}
+.projectRight.expand {
+  flex: 9;
+}

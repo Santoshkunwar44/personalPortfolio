@@ -1,0 +1,227 @@
+.technologyWrapper {
+  padding: 2rem;
+}
+.chartText {
+  font-family: var(--poppins);
+}
+.pieChartContainer {
+  padding: 50px 20px;
+  background: none !important;
+  grid-template-columns: 1fr 1fr;
+}
+.piechartTextBox {
+  font-size: 1.92rem;
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  color: rgb(3 2 2 / 37%);
+
+  font-weight: 500;
+  font-family: "poppins";
+}
+.pieChartWrapper {
+  position: relative;
+  display: grid;
+  border-radius: 14px;
+  padding: 2rem 0;
+  background: #ffffff;
+  cursor: pointer;
+  place-items: center;
+  box-shadow: rgba(56, 56, 56, 0.2) 0px 2px 8px 0px;
+}
+.pieChartInfo {
+  box-shadow: rgba(56, 56, 56, 0.2) 0px 2px 8px 0px;
+  position: relative;
+  border-radius: 14px;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  background: #ffffff;
+  cursor: pointer;
+}
+.projectsNumber {
+  font-size: 25px;
+  letter-spacing: 1.06px;
+  color: rgba(10, 116, 216, 0.705);
+}
+.technology_chart_project {
+  margin-top: 4rem;
+}
+.projectCollection {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.pieChartToolIcon {
+  opacity: 0.7;
+  height: 3.3rem !important;
+  width: 3rem !important;
+  color: rgba(10, 116, 216, 0.705) !important;
+}
+.viewMore {
+  padding: 10px 19px;
+  border-radius: 7px;
+  background: rgb(111, 30, 233);
+  background: linear-gradient(
+    45deg,
+    rgba(111, 30, 233, 0.7321814254859611) 16%,
+    rgba(139, 6, 227, 0.7926565874730022) 48%,
+    rgba(11, 115, 255, 0.7710583153347732) 100%
+  );
+  color: white;
+}
+.piechartDesc {
+  position: absolute;
+  bottom: 1rem;
+  margin: auto;
+  color: rgba(128, 128, 128, 0.774);
+  letter-spacing: 1px;
+  font-family: "poppins";
+}
+.piechartHeaderDescription {
+  font-size: 21px;
+  letter-spacing: 1.04px;
+  font-family: "poppins";
+  width: 80%;
+  line-height: 30px;
+  margin: 1rem auto;
+  color: rgba(95, 95, 95, 0.664);
+}
+.pieChartInfoBox {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  width: 100%;
+  gap: 1rem;
+}
+.pieChartInfoBox_projectName {
+  font-size: 3rem;
+  color: rgb(77, 75, 75);
+  letter-spacing: 1.2px;
+  font-family: "Space Grotesk", sans-serif;
+}
+.pieChartInfo ul {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  margin-top: 1rem;
+  height: 400px;
+  overflow-y: scroll;
+}
+.pieChartInfoBox ul li {
+  font-size: 20px;
+  border-radius: 5px;
+  letter-spacing: 1.1px;
+  display: flex;
+  border-bottom: 0.3px solid rgba(220, 220, 220, 0.568);
+  align-items: center;
+
+  justify-content: space-between;
+  padding: 0px 10px;
+  width: 100%;
+  color: gray;
+  margin-bottom: 2px;
+}
+.pieChartInfoBox ul li span {
+  font-family: "poppins";
+  color: rgba(113, 113, 114, 0.733);
+}
+.piechartInfoTop {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  align-items: center;
+}
+.percentageUsed {
+  color: rgba(10, 116, 216, 0.705);
+  font-size: 2.5rem;
+}
+.usedProjectsIconVisit {
+  width: 2rem !important;
+  font-family: "poppins";
+  color: rgba(10, 116, 216, 0.705) !important;
+}
+.goDownPiechart {
+  border-radius: 50%;
+  width: 70px;
+  height: 70px;
+  position: relative;
+
+  margin: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  justify-content: center;
+  border: 6px solid rgba(10, 116, 216, 0.705);
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px;
+}
+.piechartInfoBottomViewProjectText {
+  text-decoration: underline;
+  margin: auto;
+  letter-spacing: 1.1px;
+  color: blueviolet;
+}
+.goDownPiechart span {
+  position: absolute;
+  width: max-content;
+  letter-spacing: 1.1px;
+  color: gray;
+  bottom: -2rem;
+}
+
+@media screen and (max-width: 767px) {
+  .pieChartContainer {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .piechartHeaderDescription {
+    font-size: 14px;
+    letter-spacing: 1.04px;
+  }
+  .piechartTextBox {
+    font-size: 1.6rem;
+  }
+  .projectCollection {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .pieChartInfoBox_projectName {
+    font-size: 2rem;
+  }
+
+  .percentageUsed {
+    color: rgba(10, 116, 216, 0.705);
+    font-size: 1.5rem;
+  }
+  .projectsNumber {
+    font-size: 18px;
+    letter-spacing: 1.06px;
+    color: rgba(10, 116, 216, 0.705);
+  }
+  .pieChartInfoBox ul li {
+    font-size: 14px;
+    padding: 5px 0;
+  }
+  .usedProjectsIconVisit {
+    width: 1.5rem !important;
+
+    font-family: "poppins";
+    height: 2rem !important;
+  }
+  .pieChartInfo ul {
+    height: 300px;
+    overflow-y: scroll;
+  }
+  .piechartDesc {
+    font-size: 12px;
+  }
+}

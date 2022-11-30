@@ -1,0 +1,29 @@
+.theProject {
+  margin: 3px 0;
+  padding: 1rem;
+}
+.theProjectContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projectsHeader {
+}
+.viewMoreBox {
+  text-align: end;
+}
+@media screen and (min-width: 1200px) {
+  .theProjectContainer {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 768px) {
+  .theProjectContainer {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .theProjectContainer {
+    grid-template-columns: 1fr !important;
+  }
+}

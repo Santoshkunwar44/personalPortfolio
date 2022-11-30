@@ -1,0 +1,12 @@
+.gradientImgBox {
+  width: 100%;
+  position: relative;
+  opacity: 0.9;
+}
+.gradientImgBox img {
+  width: 100%;
+  position: absolute;
+  height: 315px;
+  top: 0;
+  left: 0;
+}

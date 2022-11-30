@@ -1,0 +1,88 @@
+.project_page_item {
+  display: flex;
+  box-shadow: 0px 0px 11px 3px rgb(219 219 219 / 30%);
+  width: 100%;
+  padding: 0rem;
+  border-top: 0.4px solid rgba(218, 217, 217, 0.205);
+  margin-bottom: 6rem;
+}
+.project_page_photo_container {
+  padding: 0rem 1rem;
+  padding-top: 4rem;
+}
+
+.project_page_name {
+  display: grid;
+  flex: 6;
+}
+.project_page_name span {
+  color: rgb(29 9 50 / 72%);
+}
+.project_page_photo {
+  border: 0.3px solid gainsboro;
+  flex: 6;
+}
+.project_page_image_wrapper {
+  width: 500px;
+  border-radius: 5px;
+  max-height: 700px;
+  height: auto;
+  overflow-y: scroll;
+  box-shadow: -2px 2px 4px 2px rgba(171, 171, 171, 0.425);
+  -webkit-box-shadow: -2px 2px 4px 2px rgba(171, 171, 171, 0.425);
+  -moz-box-shadow: -2px 2px 4px 2px rgba(171, 171, 171, 0.425);
+}
+
+.project_page_img {
+  width: 100%;
+  border-radius: 9px;
+}
+.project_page_mode_btn_item {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.project_page_mode_btn {
+  cursor: pointer;
+}
+
+.light {
+}
+
+.dark {
+  background-color: #1d1d1d;
+  color: gainsboro;
+}
+.project_page_details {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 30px;
+}
+.appAlone_actionBtn {
+  transition: all 0.5s ease;
+  cursor: pointer;
+  color: gray;
+  margin-right: 1.5rem;
+  width: 2.2rem !important;
+}
+.project_page_name {
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.1px;
+  font-size: 2rem;
+}
+.project_page_details {
+  padding-top: 2rem;
+}
+.project_page_name_list {
+  gap: 2.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+.isExpand {
+  color: rgb(110, 14, 201);
+  transform: scale(1.19);
+}

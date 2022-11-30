@@ -1,0 +1,113 @@
+.aboutMe {
+  width: 100%;
+  height: min-content;
+  padding: 120px 32px;
+  background-color: rgb(244, 247, 250);
+  margin-bottom: 5rem;
+  display: flex;
+  gap: 2rem;
+}
+.aboutMe_left {
+  text-align: start;
+  padding: 2.5rem;
+  padding-top: 20px;
+  background-color: white;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+  flex: 6;
+  border-radius: 18px;
+}
+.aboutMe h3 {
+  margin: 1rem 0;
+  font-size: 2rem;
+  letter-spacing: 1.1px;
+  color: rgb(54, 151, 255);
+}
+.aboutMe_left p {
+  color: gray;
+  word-break: break-all;
+  font-size: 16px;
+  font-family: "poppins";
+  text-align: start;
+  letter-spacing: 1.1px;
+  line-height: 35px;
+}
+
+.aboutMe_right {
+  flex: 6;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+.aboutMe_box {
+  user-select: none;
+  display: flex;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 18px;
+  padding: 10px;
+  box-shadow: rgb(17 12 46 / 15%) 0px 48px 100px 0px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.aboutMe h4 {
+  font-size: 1.1rem;
+  letter-spacing: 1.1px;
+  line-height: 32px;
+  font-family: "poppins";
+
+  color: rgb(128 128 128 / 80%);
+  font-weight: 500;
+}
+.aboutMeIcons {
+  font-size: 2rem !important;
+}
+.icon-1,
+.aboutBox-1 span {
+  color: rgb(88, 106, 245);
+  font-weight: bold;
+}
+.icon-2,
+.aboutBox-2 span {
+  color: rgb(54, 151, 255);
+  font-weight: bold;
+}
+.icon-3,
+.aboutBox-3 span {
+  color: rgb(255, 114, 35);
+  font-weight: bold;
+}
+.icon-4,
+.aboutBox-4 span {
+  color: rgb(255, 70, 113);
+  font-weight: bold;
+}
+.MuiSvgIcon-root {
+  width: 2rem !important;
+}
+
+@media screen and (max-width: 1024px) {
+  .aboutMe_left p {
+    font-size: 12px;
+    line-height: 28px;
+    font-weight: 500;
+  }
+  .aboutMe h4 {
+    font-size: 0.8rem;
+    letter-spacing: 1.1px;
+    line-height: 20px;
+    font-family: "poppins";
+
+    color: rgb(128 128 128 / 80%);
+    font-weight: 500;
+  }
+  .aboutMe_right {
+    gap: 1rem;
+  }
+  .aboutMe {
+    padding: 80px 32px;
+    gap: 2rem;
+  }
+}

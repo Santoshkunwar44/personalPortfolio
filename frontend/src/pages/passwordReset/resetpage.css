@@ -1,0 +1,164 @@
+.reset_page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  height: 100vh;
+  width: 100vw;
+}
+
+.reset_box {
+  overflow: hidden;
+  border-radius: 20px;
+  height: auto;
+  padding-bottom: 4rem;
+  width: 400px;
+  box-shadow: 0 0 4px 4px rgba(218, 218, 218, 0.164);
+  border: 0.3px solid gainsboro;
+}
+.reset_header {
+  height: 100px;
+  display: grid;
+  place-items: center;
+
+  background-color: rgba(114, 14, 207, 0.308);
+  background: var(--gradient_bg);
+}
+.reset_page_header_info {
+  width: 80%;
+  margin: 20px auto;
+  margin-bottom: 3rem;
+}
+.reset_page_header_info p {
+  color: rgb(119, 119, 119);
+  font-size: 15px;
+  font-family: var(--poppins);
+}
+.reset_page_input_box {
+  width: 80%;
+  margin: 20px auto;
+}
+.reset_page_input_box input {
+  width: 100%;
+  padding: 8px;
+  color: gray;
+  border: 0.3px solid rgba(119, 119, 119, 0.315);
+  height: 50px;
+  border-radius: 5px;
+}
+.reset_page_input_box input::placeholder {
+  letter-spacing: 1.3px;
+  color: rgba(119, 119, 119, 0.61);
+}
+.send_verfification_code_btn {
+  padding: 8px;
+  width: 70%;
+  letter-spacing: 1.1px;
+  background: var(--gradient_bg_light);
+  color: white;
+  border-radius: 3px;
+}
+.send_verfification_code_btn:hover {
+  background-color: rgba(137, 43, 226, 0.521);
+}
+.reset_header_text {
+  font-weight: 400;
+  font-family: var(--poppins);
+
+  cursor: pointer;
+  letter-spacing: 1.3px;
+
+  color: #f8f8f8;
+}
+.down_box * {
+  font-size: 14px;
+  font-family: var(--poppins);
+}
+.signUp_text {
+  color: rgba(137, 43, 226, 0.918);
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+.forgot_password_btn {
+  color: rgba(137, 43, 226, 0.575);
+  margin-top: 0.81rem;
+  cursor: pointer;
+  font-family: var(--poppins);
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  font-size: 14px;
+
+  transition: color 0.3s ease;
+}
+.forgot_password_btn:hover {
+  color: rgb(129, 4, 245);
+}
+.confirmation {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.confirmationBox {
+  width: 400px;
+  height: auto;
+  padding: 2rem 1rem;
+  box-shadow: 0 0 4px 4px rgba(220, 220, 220, 0.192);
+  border: 0.3px solid rgba(220, 220, 220, 0.623);
+}
+.confirmation_box_header_info {
+  margin-bottom: 2rem;
+}
+.confirmation_box_header_info p {
+  font-size: 14px;
+  line-height: 25px;
+  color: gray;
+  font-family: var(--poppins);
+}
+.inputBoxWrapper {
+  width: 70%;
+  margin: 10px auto;
+
+  display: flex;
+  gap: 8px;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+}
+
+.inputBoxWrapper input {
+  text-align: center;
+  border-radius: 3px;
+  width: 40px;
+  font-size: 18px;
+}
+.confirmation_code_verify_btn {
+  width: 125px;
+  background: var(--gradient_bg);
+  color: white;
+  letter-spacing: 1.2px;
+}
+.resend_verification_code_text {
+  color: gray;
+  margin: 10px auto;
+  cursor: pointer;
+  font-size: 14px;
+  color: rgba(137, 43, 226, 0.678);
+  transition: all 0.3s ease;
+}
+.resend_verification_code_text:hover {
+  color: rgba(131, 25, 230, 0.911);
+  transform: scale(1.1);
+}
+.confirmation_spam_text {
+  color: rgba(131, 25, 230, 0.726);
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.confirmation_spam_text:hover {
+  color: rgba(131, 25, 230, 0.911);
+  transform: scale(1.1);
+}

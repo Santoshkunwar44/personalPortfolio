@@ -1,0 +1,14 @@
+.drag {
+  width: 200px;
+  height: 200px;
+  background: red;
+  position: absolute;
+  z-index: 9999999;
+}
+.darkModeBtn {
+  padding: 15px !important;
+  background: var(--gradient_bg_light) !important;
+}
+.chatBtn {
+  padding-top: 7px !important;
+}

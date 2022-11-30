@@ -1,0 +1,75 @@
+.personal {
+  min-height: 330px;
+  padding: 2rem;
+  padding-top: 14rem;
+  position: relative;
+  z-index: 200;
+  margin-bottom: 2rem;
+  border-bottom: 0.4px solid rgba(128, 128, 128, 0.205);
+}
+
+.personalImg img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  object-fit: cover;
+  width: 120px;
+  height: 120px;
+  margin-bottom: 2rem;
+  border-radius: 50%;
+  border: 5px solid white;
+}
+.personlHeadingText {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.personlHeadingText h1 {
+  line-height: 70px;
+  letter-spacing: 1.05px;
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 3.2rem;
+}
+.PersonalsmallText {
+  margin-top: 2rem;
+  letter-spacing: 1.1px;
+  color: gray;
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+}
+.personalBtn {
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  width: 300px !important;
+  margin-top: 6rem !important;
+}
+.personalBtn span {
+  font-size: 24px !important;
+}
+.personal p {
+  line-height: 27px;
+  color: rgb(107, 107, 107);
+  font-family: "Nunito Sans", sans-serif;
+  letter-spacing: 1.06px;
+  font-weight: 300;
+}
+.contact {
+  min-height: 100vh;
+}
+.cv_button {
+  margin-top: 2rem;
+  background: var(--gradient_bg);
+  color: white;
+  padding: 6px 8px;
+  width: 200px;
+  height: 40px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-radius: 3px;
+}
+.downloadIconIcon {
+  cursor: pointer !important;
+  width: 2.8rem !important;
+}

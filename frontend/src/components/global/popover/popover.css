@@ -1,0 +1,80 @@
+.popOver_userImg {
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.popoverHeader {
+  border-bottom: 0.3px solid rgba(241, 241, 241, 0.267);
+  display: flex;
+  padding: 14px 8px;
+  align-items: center;
+  gap: 1.3rem;
+  border-radius: 7px 7px 0px 0px;
+
+  background: var(--gradient_bg);
+}
+.popoverHeader h2 {
+  font-size: 1.1rem;
+  color: white;
+}
+.chatBody {
+  background-color: rgba(223, 223, 223, 0.212);
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 7px;
+}
+.chatBody input {
+  height: 50px;
+  font-size: 15px;
+  border: none;
+  border-top: 0.3px solid rgb(223 223 223 / 75%);
+}
+.chatBody input::placeholder {
+  color: gray;
+  letter-spacing: 1.1px;
+  font-family: var(--poppins);
+}
+.initialText {
+  flex: 1 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.initialText h3 {
+  font-weight: 400;
+  font-size: 1.4rem;
+  color: gray;
+  font-family: var(--poppins);
+  margin-bottom: 10px;
+}
+.sayHiButton {
+  background: var(--gradient_bg);
+  color: white;
+  width: 100px;
+  border-radius: 20px 0;
+}
+.msg_box {
+  flex: 1;
+  padding: 8px;
+  padding: 8px;
+  max-height: 350px;
+  overflow: scroll;
+}
+
+.message {
+  background: var(--gradient_bg);
+  color: white;
+  max-width: 185px;
+  margin-bottom: 10px;
+  margin-right: auto;
+  padding: 8px 7px;
+  border-radius: 12px 15px 22px 0px;
+}
+.own {
+  border-radius: 10px 15px 0 15px;
+  margin-left: auto;
+  margin-right: 0;
+}

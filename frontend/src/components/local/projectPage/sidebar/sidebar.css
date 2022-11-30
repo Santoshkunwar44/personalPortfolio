@@ -1,0 +1,235 @@
+.projectSidebar {
+  flex: 1;
+  border-right: 0.5px solid rgba(221, 220, 220, 0.459);
+  height: 100vh;
+  max-height: 100vh;
+  position: relative;
+}
+.projectSidebar.expand {
+  flex: 3;
+}
+.expand .sidebar_body {
+  height: 100%;
+  display: block;
+}
+.expand .sidebarSm {
+  display: none;
+}
+.sidebar_body {
+  display: none;
+  padding: 0 1rem;
+}
+.soryBy {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  justify-content: space-between;
+}
+.expand .sidebar_header {
+  display: block;
+}
+.sidebar_header {
+  display: none;
+  border: 0.3px solid #dcdcdc47;
+  padding-bottom: 1rem;
+  padding-top: 1rem;
+  box-shadow: 0 4px 4px 4px rgba(221, 220, 220, 0.205);
+}
+.sidebar_header_text {
+  background: none;
+  color: rgba(135, 137, 253, 0.774);
+  font-weight: 400;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1.1px;
+
+  font-size: 16px;
+}
+.filter_item {
+  border-bottom: 0.3px solid rgba(209, 208, 208, 0.247);
+}
+.categoryList {
+  height: 400px;
+  overflow: scroll;
+}
+.filter_first {
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+  padding: 10px 0;
+}
+.make_row {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  justify-content: start;
+  color: gray;
+  cursor: pointer;
+}
+.filter_item_heading {
+  color: gray;
+  padding-bottom: 15px;
+  letter-spacing: 1.1px;
+  font-size: 17px;
+  text-align: start;
+  font-family: var(--poppins);
+  display: block;
+}
+.filter {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.type_project {
+  margin-bottom: 16px;
+  justify-content: space-between;
+}
+input[type="checkbox"] {
+  width: 20px;
+  border-color: gray;
+  height: 20px;
+}
+.type_project label {
+  font-size: 13px;
+  font-family: "poppins";
+  text-align: start;
+  color: gray;
+}
+.filterSortIcon {
+  width: 2rem !important;
+}
+.sortTypeName {
+  font-size: 14px;
+}
+.soryBy input {
+  border: 0.3px solid rgba(220, 220, 220, 0.596);
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.arrowLeftIcon {
+  width: 9rem !important;
+  color: rgb(12, 6, 100) !important;
+  position: absolute !important;
+  right: -60px !important;
+  display: none !important;
+  top: 17rem;
+  cursor: pointer;
+  height: 15rem !important;
+}
+.sidebarSm {
+  padding-top: 2rem;
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  gap: 4rem;
+  align-items: center;
+}
+.sidebarSm p {
+  color: gray;
+  padding: 10px 0;
+  cursor: pointer;
+  font-family: "poppins";
+  font-size: 18px;
+  letter-spacing: 1.1px;
+  border-bottom: 0.3px solid gainsboro;
+}
+
+.sidebarSm svg {
+  width: 2.5rem !important;
+  cursor: pointer;
+
+  color: rgba(1, 68, 29, 0.575);
+}
+.sidebarSm_img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.sidebarSm_img img {
+  width: 45px;
+  cursor: pointer;
+}
+.sidebarSmSort {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+.categoryType {
+  color: blueviolet !important;
+  border-bottom: none !important;
+}
+.css-14el2xx-placeholder {
+  font-size: 12px;
+}
+.expand .sidebarSm_toggleBar {
+  margin-bottom: 0;
+}
+.sidebarSm_toggleBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(130, 8, 245, 0.856);
+  background: var(--gradient_bg);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  gap: 10px;
+  height: 40px;
+  margin-bottom: 2rem;
+}
+.sidebarSm_toggleBar svg {
+  width: 1.2rem !important;
+  height: 2rem !important;
+}
+.sidebarSm_toggleBar span {
+  letter-spacing: 1.1px;
+  font-size: 14px;
+}
+.sidebarSm {
+  opacity: 0.4;
+}
+@media screen and (max-width: 1200px) {
+  .sidebarSm {
+    height: 100%;
+    gap: 1rem;
+    padding-top: 0rem;
+  }
+  .sidebarSm p {
+    font-size: 10px;
+    width: 100%;
+  }
+  .sidebarSm svg {
+    width: 1.5rem !important;
+    cursor: pointer;
+    height: 2rem !important;
+    color: rgba(1, 68, 29, 0.575);
+  }
+  .sidebarSmSort {
+    gap: 0.5rem;
+    width: 100%;
+  }
+  .sidebarSm_img {
+    width: 100%;
+  }
+  .sidebarSm_img img {
+    width: 25px;
+
+    cursor: pointer;
+  }
+  .sidebarSm_img {
+    gap: 1rem;
+  }
+  .sidebar_category {
+    width: 100%;
+    padding-top: 1rem;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .sidebarSm {
+    display: none;
+  }
+}

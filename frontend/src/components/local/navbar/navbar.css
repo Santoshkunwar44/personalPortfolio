@@ -1,0 +1,57 @@
+.navbar {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  background-color: transparent;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
+  z-index: 999;
+  height: 70px;
+}
+.blurNav {
+  backdrop-filter: blur(40px);
+  background-color: rgba(255, 255, 255, 0.6);
+}
+.nav_hide * {
+  /* color: white; */
+}
+.nav_hide .nav_list_item {
+  /* color: white; */
+}
+.nav_left {
+  flex: 1;
+  padding-left: 2rem;
+  display: flex;
+  justify-content: start;
+}
+
+.nav_left img {
+  cursor: pointer;
+}
+
+.nav_list {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding-right: 2rem;
+}
+.nav_list_item {
+  margin-left: 40px;
+  color: rgb(77, 75, 75);
+  letter-spacing: 1.2px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Poppins", sans-serif;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1024px) {
+  .nav_list_item {
+    font-size: 12px;
+  }
+}

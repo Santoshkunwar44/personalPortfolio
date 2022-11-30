@@ -1,0 +1,100 @@
+.reviews {
+  width: 100%;
+  padding-top: 2rem !important;
+  padding: 0;
+}
+.reviewsWrapper {
+  gap: 1rem;
+  display: flex;
+}
+
+.reviewsLeft {
+  background: #f7f7f7;
+  box-shadow: rgb(50 50 93 / 25%) 0px 3px 12px -2px,
+    rgb(0 0 0 / 30%) 2px 0px 7px -3px;
+  flex: 5 !important;
+}
+
+.reviews_header {
+  padding-bottom: 2.8rem;
+  padding-top: 1.8rem;
+  color: rgba(5, 5, 66, 0.959);
+}
+.reviews_header h1 {
+  font-size: 2.4rem;
+  position: relative;
+  font-family: "Space Grotesk", sans-serif;
+  letter-spacing: 1.1px;
+}
+.reviews_header h1::after {
+  content: "";
+  position: absolute;
+  bottom: -14px;
+  right: 50%;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  background-color: rgba(128, 128, 128, 0.767);
+  width: 80px;
+  border-radius: 5px;
+  height: 4px;
+  background: rgb(111, 30, 233);
+  background: linear-gradient(
+    45deg,
+    rgba(111, 30, 233, 0.7321814254859611) 16%,
+    rgba(139, 6, 227, 0.7926565874730022) 48%,
+    rgba(11, 115, 255, 0.7710583153347732) 100%
+  );
+}
+.fiverMainImg {
+  width: 100%;
+}
+.reviewsRight {
+  padding: 1rem;
+  padding-top: 0;
+  flex: 7 !important;
+}
+.reviewsRight p {
+  margin-bottom: 1rem;
+  color: gray;
+  line-height: 30px;
+  text-align: start;
+  font-weight: 400;
+  font-weight: 100 !important;
+  font-family: "poppins";
+  font-size: 14px;
+}
+.reviewsImage {
+  margin-top: 2rem;
+}
+.fiverBtn {
+  display: flex;
+  align-items: center;
+  display: flex;
+  align-items: center;
+  margin: 2rem auto;
+  border: 0.3px solid #19a463;
+  border-radius: 44px;
+  margin: 2rem auto;
+  margin-top: 6rem;
+}
+.fiverBtn:hover {
+  background-color: rgb(255, 255, 255);
+}
+.fiverBtn span {
+  color: #19a463;
+  padding: 5px;
+  font-size: 17px;
+  letter-spacing: 1.1px;
+
+  font-family: var(--nunito);
+  font-weight: 500;
+}
+
+@media screen and (max-width: 1024px) {
+  .reviewsRight p {
+    font-size: 11px;
+    line-height: 24px;
+    font-weight: 100 !important;
+    font-family: "poppins";
+  }
+}

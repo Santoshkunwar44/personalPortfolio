@@ -1,0 +1,81 @@
+.filteredUi {
+  min-height: 100px;
+  height: fit-content;
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.filteredUiLeft {
+}
+.filteredUi-left-container {
+  flex: 6;
+  cursor: pointer;
+}
+.filteredUiRight {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 10px;
+  flex: 6;
+}
+.chipsContainer {
+  padding: 0;
+}
+.filterText {
+  color: gray;
+  font-weight: 500;
+  font-size: 14px;
+  letter-spacing: 1.1px;
+  font-family: var(--poppins);
+}
+.filterItem {
+  display: flex;
+  min-width: 70px;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: 5px;
+}
+.resultFoundText {
+  color: gray;
+  font-family: var(--poppins);
+  margin: 8px 0;
+  font-size: 13px;
+}
+.filteredUiBox {
+  /* border-bottom: 0.5px solid rgba(220, 220, 220, 0.356); */
+}
+.search_results {
+  margin: 25px 0;
+  margin-bottom: 5px;
+}
+.labelName {
+  color: rgb(167, 167, 167);
+  margin-bottom: 3px;
+  display: block;
+  font-weight: 100;
+  letter-spacing: 1.1px;
+  font-size: 12px;
+  font-family: var(--poppins);
+  padding-left: 6px;
+}
+.filter_item_list {
+  text-align: start;
+  padding: 5px 0;
+  border-radius: 3px;
+  box-shadow: rgb(50 50 93 / 11%) 3px 6px 12px 0px,
+    rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+}
+.techFilterSelect {
+  width: 100%;
+  border: none;
+  outline: none;
+  border-radius: 9px;
+}
+.labelName {
+  font-size: 10px;
+  margin-bottom: 5px;
+  text-align: start;
+}

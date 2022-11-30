@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
+
+.SignUp {
+  margin-top: 2rem;
+}
+.signUp_headerInfo {
+  width: 90%;
+  margin: 1rem auto;
+}
+.signUp_headerInfo * {
+  color: gray;
+}
+.signUp_headerInfo p {
+  font-size: 13px;
+  font-family: var(--poppins);
+  margin: 1rem 0;
+}
+.form_header_text {
+  font-family: "Dancing Script", cursive;
+  font-weight: bold;
+  margin: auto;
+}
+.signin_header {
+  text-align: center;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+.form_container {
+  height: auto;
+
+  padding: 2rem 0;
+
+  margin: auto;
+  width: 400px;
+  border: 0.3px solid gainsboro;
+}
+
+.form {
+  display: flex;
+  width: 100%;
+
+  flex-direction: column;
+}
+.form input {
+  width: 80%;
+
+  padding: 7px 4px;
+  margin: auto;
+  border: 0.3px solid gainsboro;
+  margin-bottom: 0.45rem;
+}
+.form input::placeholder {
+  color: rgb(160, 160, 160);
+  letter-spacing: 1.1px;
+  font-weight: 100;
+}
+.auth_SignUpBtn {
+  height: 36px;
+  width: 70%;
+  font-size: 16px;
+  letter-spacing: 1.1px;
+  margin: auto;
+  margin-top: 1rem;
+  background: var(--gradient_bg);
+  color: white;
+}
+.divider {
+  height: 1px;
+  width: 50%;
+  background-color: rgba(167, 167, 167, 0.479);
+  margin: 2rem auto;
+}
+.dividerBox {
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.or_text {
+  color: rgba(167, 167, 167, 0.801);
+}
+.loginWithBox {
+  margin: 0 auto;
+}
+.loginWith {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.71rem;
+  gap: 10px;
+}
+.loginWith img {
+  width: 30px;
+}
+.loginWith * {
+  font-family: var(--poppins);
+  font-size: 14px;
+  color: gray;
+}
+.down_box {
+  width: 400px;
+  height: 70px;
+
+  display: grid;
+  place-items: center;
+  border: 0.3px solid gainsboro;
+
+  margin: 2rem auto;
+}
+.down_box * {
+  font-size: 14px;
+  font-family: var(--poppins);
+}
+.signUp_text {
+  color: blueviolet;
+  font-weight: bold;
+  letter-spacing: 1.1px;
+  cursor: pointer;
+}
+.terms_condition {
+  width: 90%;
+  text-align: center;
+  margin: 1rem auto;
+}
+.terms_condition p {
+  color: gray;
+  font-family: var(--poppins);
+  font-size: 12px;
+}

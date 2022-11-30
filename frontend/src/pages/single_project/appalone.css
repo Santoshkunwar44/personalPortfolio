@@ -1,0 +1,134 @@
+.project_main {
+  display: flex;
+  width: 100%;
+  text-align: start;
+  background-color: var(--main_white);
+  padding-top: 0px;
+}
+.project_page_toolss {
+  border: 0.3px solid #dcdcdc47;
+  position: relative;
+  margin: 2rem auto;
+  max-width: 1024px;
+  width: 100%;
+}
+.start_ratingBox {
+  display: flex;
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  flex-direction: column;
+}
+.project_name {
+  color: rgb(29 9 50 / 72%);
+  margin-bottom: 0.1rem;
+  letter-spacing: 1.1px;
+  font-size: 3.4rem;
+}
+.single_project_type {
+  letter-spacing: 1.1px;
+  font-size: 15px;
+  padding-left: 0.6rem;
+  font-family: var(--poppins);
+  color: rgb(143, 143, 143);
+}
+.left {
+  flex: 5;
+}
+.right {
+  flex: 7;
+}
+.project_info_main {
+  margin-bottom: 1rem;
+}
+.project_feature_item {
+  color: rgb(126, 123, 123);
+  font-size: 12px;
+  margin: 0.3rem 0;
+  font-family: var(--poppins);
+  letter-spacing: 1.01px;
+  padding-left: 1.3rem;
+}
+.project_feature_header {
+  font-weight: 500;
+  margin: 1.5rem 0;
+  margin-bottom: 0.2rem;
+  font-family: var(--poppins);
+  font-size: 17px;
+  color: rgba(137, 43, 226, 0.726);
+}
+.technology_list {
+  display: flex;
+  gap: 10px;
+  padding: 5px;
+  border-radius: 4px;
+}
+.project_details_appAlone {
+  padding: 1rem;
+  padding-top: 3rem;
+}
+.project_details_appAlone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  padding-bottom: 0;
+}
+.project_main_info_app_alone {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.editProject {
+  color: blueviolet;
+}
+.project_info_type_rating {
+  display: flex;
+  margin-top: 1rem;
+  flex-direction: column;
+}
+.ratingsBadge {
+  border-radius: 50%;
+  width: 30px;
+  display: grid;
+  place-items: center;
+
+  height: 30px;
+  color: gray;
+
+  padding: 4px;
+  border: 0.3px solid gainsboro;
+}
+.ratingBox {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+.app_alone_page_header {
+  display: flex;
+  border-bottom: 0.3px solid #dcdcdc5e;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+.appAlone_header_button {
+  display: flex;
+  gap: 1rem;
+  margin: 2rem;
+}
+.appAlone_header_button button {
+  padding: 9px 25px;
+  background: var(--gradient_bg_light);
+  color: white;
+  border-radius: 25px 3px;
+}
+.appAlone_header_bottom {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.rating_text {
+  color: gray;
+  font-family: var(--poppins);
+  letter-spacing: 1.1px;
+}

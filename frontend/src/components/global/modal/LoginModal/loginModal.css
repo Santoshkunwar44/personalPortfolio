@@ -1,0 +1,75 @@
+.loginWithBox {
+  margin: 0 auto;
+  width: 40%;
+  text-align: center;
+}
+.loginWith {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  margin-bottom: 0.71rem;
+  gap: 10px;
+  transition: all 0.2s ease-in-out;
+}
+.loginWith img {
+  width: 30px;
+}
+.loginWith * {
+  font-family: var(--poppins);
+  font-size: 15px;
+  color: gray;
+  letter-spacing: 1.1px;
+}
+.loginWith:hover {
+  color: blueviolet;
+  transform: scale(1.1);
+}
+
+.divider {
+  height: 1px;
+  width: 50%;
+  background-color: rgba(167, 167, 167, 0.479);
+  margin: 2rem auto;
+}
+.dividerBox {
+  gap: 10px;
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.or_text {
+  color: rgba(167, 167, 167, 0.801);
+}
+.modalButtons {
+  background: linear-gradient(
+    45deg,
+    rgba(111, 30, 233, 0.822) 16%,
+    rgba(139, 6, 227, 0.7926565874730022) 48%,
+    rgba(11, 115, 255, 0.7710583153347732) 100%
+  ) !important;
+  color: white;
+  opacity: 0.8;
+  letter-spacing: 1.2px;
+  font-size: 16px;
+  height: 40px;
+  border-radius: 22px 0;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+}
+.modalButtons_2 {
+  border-radius: 0 22px;
+}
+.modalButtons:hover {
+  transform: scale(1.1);
+}
+.modal_header_text {
+  color: gray;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  font-family: var(--poppins);
+  margin: auto;
+  margin-bottom: 1rem;
+}
