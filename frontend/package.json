@@ -33,6 +33,7 @@
     "react-scroll": "^1.8.8",
     "react-select": "^5.5.4",
     "react-three-fiber": "^6.0.13",
+    "react-three-resize-helper": "^1.0.28",
     "recharts": "^2.1.15",
     "redux": "^4.2.0",
     "redux-persist": "^6.0.0",

@@ -1,10 +1,12 @@
 .loginWithBox {
   margin: 0 auto;
-  width: 40%;
+  width: 100%;
+
   text-align: center;
 }
 .loginWith {
   display: flex;
+  justify-content: center;
   align-items: center;
   cursor: pointer;
   margin-bottom: 0.71rem;
@@ -72,4 +74,7 @@
   font-family: var(--poppins);
   margin: auto;
   margin-bottom: 1rem;
+}
+.css-1oxhx2p {
+  z-index: 999 !important;
 }

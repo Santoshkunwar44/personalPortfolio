@@ -17,30 +17,33 @@ const FilteredUi = () => {
                             <div className="filteredUiLeft filteredUiItem">
                                 <select className="techFilterSelect">
                                     {
-                                        filteredTools?.map((item) => (
-                                            <option>{item}</option>
-                                        ))
+                                        filteredTools?.length ?
+                                            filteredTools?.map((item) => (
+                                                <option>{item}</option>
+                                            )) :
+                                            <option>All Tools</option>
                                     }
                                 </select>
                             </div>
                         </div>
                     </div>
                     <div className="filteredUiRight filteredUiItem">
-                        <div>
+                        <div className="filterRightItemWrapper">
 
                             <label className="labelName" htmlFor="">Type</label>
                             <div className="filter_item_list">
                                 <select className="techFilterSelect">
                                     {
-                                        projectType?.map((item) => (
+                                        projectType?.length > 0 ? projectType?.map((item) => (
                                             <option>{item}</option>
 
-                                        ))
+                                        )) :
+                                            <option>All</option>
                                     }
                                 </select>
                             </div>
                         </div>
-                        <div>
+                        <div className="filterRightItemWrapper">
 
 
                             <label className="labelName" htmlFor="">Limit</label>
@@ -51,7 +54,7 @@ const FilteredUi = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className="filterRightItemWrapper">
 
 
                             <label className="labelName" htmlFor="">Sort By</label>
@@ -62,14 +65,14 @@ const FilteredUi = () => {
                                 </div>
                             </div>
                         </div>
-                        <div>
+                        <div className="filterRightItemWrapper">
 
 
                             <label className="labelName" htmlFor="">Ratings</label>
                             <div className="filter_item_list">
 
                                 <div className="filterItem">
-                                    <h3 className="filterText">{rating}</h3>
+                                    <h3 className="filterText">{rating ? rating : "All"}</h3>
                                 </div>
                             </div>
                         </div>

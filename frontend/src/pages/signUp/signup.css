@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap");
 
 .SignUp {
-  margin-top: 2rem;
+  margin-top: 70px;
 }
 .signUp_headerInfo {
   width: 90%;
@@ -16,7 +16,7 @@
   margin: 1rem 0;
 }
 .form_header_text {
-  font-family: "Dancing Script", cursive;
+  font-family: "Space Grotesk", sans-serif;
   font-weight: bold;
   margin: auto;
 }
@@ -27,12 +27,11 @@
 }
 .form_container {
   height: auto;
-
   padding: 2rem 0;
-
+  border-radius: 5px;
   margin: auto;
-  width: 400px;
-  border: 0.3px solid gainsboro;
+  width: 340px;
+  border: 0.3px solid #dcdcdc80;
 }
 
 .form {
@@ -44,19 +43,23 @@
 .form input {
   width: 80%;
 
-  padding: 7px 4px;
+  padding: 7px 10px;
+  font-size: 13px;
+  color: #8f8f8fcb;
   margin: auto;
-  border: 0.3px solid gainsboro;
+  border: 0.3px solid #dcdcdc80;
   margin-bottom: 0.45rem;
 }
+
 .form input::placeholder {
-  color: rgb(160, 160, 160);
+  color: rgba(160, 160, 160, 0.692);
   letter-spacing: 1.1px;
   font-weight: 100;
+  font-size: 12px;
 }
 .auth_SignUpBtn {
   height: 36px;
-  width: 70%;
+  width: 50%;
   font-size: 16px;
   letter-spacing: 1.1px;
   margin: auto;
@@ -101,7 +104,7 @@
   color: gray;
 }
 .down_box {
-  width: 400px;
+  width: 340px;
   height: 70px;
 
   display: grid;

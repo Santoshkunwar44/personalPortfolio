@@ -24,8 +24,8 @@ export default function ActionBtn() {
     }, [])
 
     const actions = [
-        { icon: <Pops> <ChatBubbleOutlineRounded className='chatBtn' /></Pops>, name: 'Chats' },
-        { icon: <DarkMode />, name: 'DarkMode ' },
+        { icon: <Pops> <ChatBubbleOutlineRounded className='chatBtn speedDialIcon' /></Pops>, name: 'Chats' },
+        { icon: <DarkMode className='speedDialIcon' />, name: 'DarkMode ' },
     ];
 
 
@@ -34,11 +34,10 @@ export default function ActionBtn() {
             <Draggable>
 
                 <motion.div
-
-                    initial={{ x: "200px", opacity: 0 }}
-                    animate={{ x: "0px", opacity: 1 }}
-                    transition={{ duration: 0.8, delay: 3 }}
-                    style={{ position: 'fixed', bottom: "140px", right: 16, zIndex: 9999 }}
+                    // initial={{ x: "200px", opacity: 0 }}
+                    // animate={{ x: "0px", opacity: 1 }}
+                    // transition={{ duration: 0.8, delay: 3 }}
+                    style={{ position: 'fixed', bottom: "50px", right: 16, zIndex: 9999 }}
                 >
                     <GuidePop toggle={toggle}>
                         <SpeedDial

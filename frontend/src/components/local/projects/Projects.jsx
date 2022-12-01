@@ -62,39 +62,36 @@ const Projects = () => {
 
     return (
         <>
-
-            {/* <div className='projects_header'>
-
-                    <h3 className='section_title'>My Some Projects</h3>
-
-
-
-                </div> */}
-            <motion.section
+            <motion.div
                 ref={ref}
                 initial={{ opacity: 0, y: "200px" }}
                 animate={animation}
                 transition={{ duration: 0.71 }}
-                style={{ background: "gray" }}
-                className='projects mini-container' id='projects'>
-                {/* {
-                    theProjects.slice(0, 3).map((item, i) => (
-                        <Project item={item} key={item.name} />
-                        ))
-                    } */}
-                <Suspense fallback={null}>
-                    <Slider item={theProjects} />
-                </Suspense>
-                {/* <div style={{ marginLeft: "2rem", position: "absolute", right: "-18px" }}>
+            >
+
+                <div className='projects_header'>
+                    <div className="project_title">
+                        <img src="/assets/images/idea.png" alt="projects" />
+                        <h1> <span style={{ fontSize: '2rem' }}>THE</span> PROJECTS</h1>
+
+                    </div>
+                    <p>Some of My projects  with different technologies Nodejs , React , Python , Django </p>
+                    <p>Click in the project and visit the website & get the source code of the project .</p>
 
 
-<Fab color="primary" className={"next_project_btn"} aria-label="add">
-<ChevronRight />
-</Fab>
-</div> */}
+                </div>
+                <motion.section
+                    style={{ background: "gray" }}
+                    className='projects mini-container' id='projects'>
+
+                    <Suspense fallback={null}>
+                        <Slider item={theProjects} />
+                    </Suspense>
 
 
-            </motion.section>
+
+                </motion.section>
+            </motion.div>
         </>
     )
 }

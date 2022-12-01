@@ -4,13 +4,28 @@ import Navbar from '../../components/local/navbar/Navbar'
 import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
 import "./contact.css"
 import ContactFrom from './ContactFrom'
+import { motion } from "framer-motion"
 
 const Contact = () => {
     return (
         <>
             <Navbar />
             <Gradient />
-            <div className='contact mid_width'>
+            <motion.div
+
+                initial={{
+                    opacity: 0.7,
+                    x: "-700px",
+                    scale: 0.7
+                }}
+                animate={{
+                    opacity: 1,
+                    x: "0",
+                    scale: 1
+                }}
+
+                transition={{ duration: 1 }}
+                className='contact mid_width'>
                 <div className='personal'>
 
                     <div className="personalImg">
@@ -28,7 +43,7 @@ const Contact = () => {
 
                 <ContactFrom />
 
-            </div>
+            </motion.div>
 
             <Footer />
         </>

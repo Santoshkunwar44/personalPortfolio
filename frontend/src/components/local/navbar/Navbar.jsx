@@ -5,6 +5,7 @@ const Navbar = () => {
 
     const location = useLocation().pathname
     const [hideNav, sethideNav] = useState(true)
+    const pathName = useLocation().pathname
     useEffect(() => {
         window.addEventListener("scroll", handleScroll)
         return () => {
@@ -28,6 +29,13 @@ const Navbar = () => {
 
     }
 
+
+    function isActiveLink(navLink) {
+        if (navLink === pathName) {
+            return "activeNav"
+        }
+    }
+
     return (
         <div className={`navbar ${!hideNav ? "blurNav" : ""} ${location !== "/" && "blurNav"}`}>
             <div className="nav_left"  >
@@ -35,16 +43,16 @@ const Navbar = () => {
             </div>
             <div className="nav_right">
                 <ul className='nav_list'>
-                    <Link to={'/'} className={"link"}>
+                    <Link to={'/'} className={`link navLink ${isActiveLink("/")}`}>
                         <li className='nav_list_item'>Dashboard</li>
                     </Link>
-                    <Link className="link" to={"/technology"}>
+                    <Link className={`link navLink ${isActiveLink("/technology")}`} to={"/technology"}>
                         <li className='nav_list_item'>Technologies</li>
                     </Link>
-                    <Link className="link" to={"/projects"}>
+                    <Link className={`link navLink ${isActiveLink("/projects")}`} to={"/projects"}>
                         <li className='nav_list_item'>Projects and works</li>
                     </Link>
-                    <Link className="link" to={"/contact"}>
+                    <Link className={`link navLink ${isActiveLink("/contact")}`} to={"/contact"}>
                         <li className='nav_list_item'>Contact</li>
                     </Link>
 

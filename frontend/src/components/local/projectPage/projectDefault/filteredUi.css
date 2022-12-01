@@ -1,11 +1,13 @@
 .filteredUi {
-  min-height: 100px;
+  min-height: 80px;
   height: fit-content;
   display: flex;
   align-items: center;
   padding: 0 1rem;
   margin: 0 auto;
   gap: 20px;
+  background-color: #f4f7fa;
+  width: 80%;
 }
 
 .filteredUiLeft {
@@ -45,7 +47,12 @@
   font-size: 13px;
 }
 .filteredUiBox {
-  /* border-bottom: 0.5px solid rgba(220, 220, 220, 0.356); */
+  box-shadow: rgb(50 50 93 / 16%) 0px 50px 100px -20px,
+    rgb(0 0 0 / 18%) 0px 30px 60px -30px;
+  background-color: #f4f7fa;
+}
+.filteredUiBox select {
+  background-color: transparent !important;
 }
 .search_results {
   margin: 25px 0;
@@ -60,13 +67,19 @@
   font-size: 12px;
   font-family: var(--poppins);
   padding-left: 6px;
+  color: rgba(137, 43, 226, 0.582);
 }
 .filter_item_list {
   text-align: start;
   padding: 5px 0;
   border-radius: 3px;
-  box-shadow: rgb(50 50 93 / 11%) 3px 6px 12px 0px,
-    rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+  box-shadow: rgba(139, 138, 138, 0.2) 0px 2px 8px 0px;
+}
+.filter_item_list * {
+  font-weight: 100;
+  letter-spacing: 1.1px;
+  color: #1b1b1b;
+  font-size: 13px;
 }
 .techFilterSelect {
   width: 100%;
@@ -75,7 +88,11 @@
   border-radius: 9px;
 }
 .labelName {
-  font-size: 10px;
+  font-size: 12px;
   margin-bottom: 5px;
   text-align: start;
+  color: #a3a3a3;
+}
+.filterRightItemWrapper {
+  flex: 1;
 }

@@ -2,6 +2,7 @@ import { useEffect, useState } from "react"
 import { Outlet, useLocation } from "react-router-dom"
 import Navbar from "../../components/local/navbar/Navbar"
 import Sidebar from "../../components/local/projectPage/sidebar/Sidebar"
+import { motion } from "framer-motion"
 import "./projectAdminDash.css"
 const ProjectAdminDash = () => {
 
@@ -17,7 +18,20 @@ const ProjectAdminDash = () => {
     return (
         <>
             <Navbar />
-            <div className="dashboardContainer">
+            <motion.div
+                initial={{
+                    opacity: 0.7,
+                    x: "-700px",
+                    scale: 0.7
+                }}
+                animate={{
+                    opacity: 1,
+                    x: "0",
+                    scale: 1
+                }}
+
+                transition={{ duration: 1 }}
+                className="dashboardContainer">
                 {
                     showSidebar ? <Sidebar toggleSidbarExpand={() => setSidebarExpand(!sidebarExpand)} sidebarExpand={sidebarExpand} expandSidebarFunction={() => { setSidebarExpand(true); console.log("clicked") }} /> : null
                 }
@@ -26,7 +40,7 @@ const ProjectAdminDash = () => {
                     <Outlet />
                 </div>
 
-            </div>
+            </motion.div>
         </>
     )
 }

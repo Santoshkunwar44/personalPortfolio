@@ -23,6 +23,7 @@ function LoginModal() {
 
     const handleLoginWith = () => {
         window.open("http://localhost:8000/api/passport/google", "_self")
+        onClose()
     }
 
 
@@ -34,15 +35,15 @@ function LoginModal() {
     return (
         <>
 
-            <Modal isOpen={isOpen} onClose={onClose}>
+            <Modal isOpen={isOpen} onClose={onClose} >
                 <ModalOverlay width={"100vw"} height={"100vh"} />
-                <ModalContent borderRadius={"10px"} padding={"2rem"} margin={"0em auto"} marginTop={"6em"} width={"40%"} backgroundColor={"#ffffff"} boxShadow={"0 0 4px 4px gainsboro"} >
+                <ModalContent position={"relative"} zIndex={999} borderRadius={"10px"} padding={"2rem"} margin={"0em auto"} marginTop={"6em"} width={"40%"} backgroundColor={"#ffffff"} boxShadow={"0 0 4px 4px gainsboro"} >
                     <ModalHeader textAlign={"center"}> <h3 className='modal_header_text'>CONNECT WITH SANTOSH PORTBOOK</h3> </ModalHeader>
                     <ModalBody background={"purple.100"}>
                         <div style={{ display: "flex", flexDirection: "column", gap: "10px", justifyContent: "center", width: "60%", justifyContent: "center", alignItems: "center", margin: "10px auto" }}>
 
-                            <Button className='modalButtons' onClick={() => handleNavigate("authenticate")}>LOGIN </Button>
-                            <Button className='modalButtons ' onClick={() => handleNavigate("signup")}>SIGN IN  </Button>
+                            <Button className='modalButtons' onClick={() => { handleNavigate("authenticate"); onClose() }}>LOGIN </Button>
+                            <Button className='modalButtons ' onClick={() => { handleNavigate("signup"); onClose() }}>SIGN IN  </Button>
                         </div>
                         <div className="dividerBox">
                             <div className="divider"></div> <span className="or_text">Or</span>

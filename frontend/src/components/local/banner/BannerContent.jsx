@@ -4,6 +4,7 @@ import Pops from "../../global/popover/Popover"
 import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
 import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
 import "./banner.css"
+import { useEffect, useState } from "react";
 // function Scene() {
 //     return (
 //         <mesh >
@@ -22,10 +23,28 @@ import "./banner.css"
 //     );
 // }
 
+
+
 const BannerContent = () => {
+
+
+    const [animateWidth, setAnimateWidth] = useState(window.innerWidth / 2)
+
+    useEffect(() => {
+
+
+        window.addEventListener("resize", () => {
+            setAnimateWidth(window.innerWidth / 2)
+        })
+
+
+
+
+    }, [])
+
     return (
         <>
-            <div className='banner'>
+            <div className='banner' style={{ width: `${animateWidth}px` }}>
                 <div className="banner_user_profile">
                     <div className="img_animate js">
                         <img draggable={"false"} src="data:image/png;base64,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" />
@@ -49,7 +68,7 @@ const BannerContent = () => {
                             <p>I'm an IT enthusiast ,  been graduating in Bachelor in Computer Application (BCA)
                                 Intimacy with the Web technologies , obsessed with computer books & affection with bugs</p>
                             <p>Mind Blowing projects are my experiences in which  you should your eyes  on </p>
-                            <button className='cv_button bannerCvButton'> <SimCardDownloadIcon className={"bannerCvDownloadIcon "}
+                            <button className='cv_button bannerCvButton  bannerButton'> <SimCardDownloadIcon className={"bannerCvDownloadIcon "}
                             /> <span>Download Cv</span></button>
                         </div>
                     </div>

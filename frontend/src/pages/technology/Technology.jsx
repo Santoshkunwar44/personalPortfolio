@@ -16,6 +16,7 @@ import CallMissedOutgoingIcon from '@mui/icons-material/CallMissedOutgoing';
 import { getTools } from "../../utility/urls/tools"
 
 
+
 const Technology = () => {
 
 
@@ -175,7 +176,20 @@ const Technology = () => {
     return (
         <>
             <Gradient />
-            <div className="technology">
+            <motion.div
+                initial={{
+                    opacity: 0.4,
+                    x: "-300px",
+                    scale: 0.7
+                }}
+                animate={{
+                    opacity: 1,
+                    x: "0",
+                    scale: 1
+                }}
+
+                transition={{ duration: 1 }}
+                className="technology">
                 <Navbar />
                 <div className="technologyWrapper">
                     <Technologies />
@@ -255,7 +269,7 @@ const Technology = () => {
                     </div>
 
                 </div>
-            </div>
+            </motion.div>
             <Footer />
         </>
     )

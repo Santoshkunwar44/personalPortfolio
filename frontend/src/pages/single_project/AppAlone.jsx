@@ -16,6 +16,7 @@ const AppAlone = () => {
     const [thePages, setThePages] = useState([])
     const user = useSelector((state) => state.authReducer.user)
     const [currentProject, setCurrentProject] = useState({})
+    const [fetchNew, setFetchNew] = useState(false)
     const [currentPage, setCurrentPage] = useState({
         index: "",
         data: null
@@ -52,12 +53,11 @@ const AppAlone = () => {
 
         const userRating = currentProject.ratings?.filter((rating) => rating?.userId === user?._id)
         if (userRating) {
-            setDefaultData((prev) => ({ ...prev, defaultRating: userRating[0]?.rating }))
+            setValue(userRating[0]?.rating)
         }
     }, [currentProject, user])
 
 
-    console.log(currentPage)
 
     // fetch  current project f unction
 
@@ -73,7 +73,6 @@ const AppAlone = () => {
 
 
     const handleStartRating = async () => {
-
 
         const theBody = {
 
@@ -94,12 +93,25 @@ const AppAlone = () => {
     }
 
     useEffect(() => {
-        handleStartRating()
+
+
+        handleRatingMethod()
+
+
     }, [value])
 
 
+    async function handleRatingMethod() {
+        handleStartRating()
+        setFetchNew(true)
+    }
+    useEffect(() => {
+        fetchCurrentProjectFunc()
+    }, [fetchNew])
 
 
+
+    console.log(currentProject)
 
     return (
         <>
@@ -111,11 +123,14 @@ const AppAlone = () => {
                             <div className='project_info_main'>
                                 <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
                                     <h3 className='project_name'>{currentProject?.name}</h3>
-                                    <Link to={{ pathname: "/admin/project/new" }} state={{ data: currentProject }}>
-                                        <Button>
-                                            <ModeEditOutlinedIcon className={"editProject"} />
-                                        </Button>
-                                    </Link>
+                                    {
+                                        user?.isAdmin ?
+                                            <Link to={{ pathname: "/admin/project/new" }} state={{ data: currentProject }}>
+                                                <Button>
+                                                    <ModeEditOutlinedIcon className={"editProject"} />
+                                                </Button>
+                                            </Link> : ""
+                                    }
                                 </div>
                                 <div className='project_info_type_rating'>
 
@@ -136,7 +151,7 @@ const AppAlone = () => {
                                         currentProject?.currentFeatures?.map((item, index) => (
 
                                             <li key={index
-                                            } className="project_feature_item">{item}</li>
+                                            } className="project_feature_item featuresLi">{item}</li>
                                         ))
                                     }
 
@@ -164,7 +179,6 @@ const AppAlone = () => {
 
                                     <div className='tech_item'>
                                         <img src="/assets/images/toosl/node.jpg" alt="tech-tools" style={{ objectFit: "cover", borderRadius: "4px" }} width={'35px'} height={"35px"} />
-
                                     </div>
                                     <div className='tech_item'>
                                         <img src="/assets/images/react.jpg" alt="tech-tools" style={{ objectFit: "cover", borderRadius: "4px" }} width={'35px'} height={"35px"} />
@@ -182,13 +196,19 @@ const AppAlone = () => {
 
                                 </div>
                                 <div className='appAlone_header_button'>
-                                    <button>
-                                        View Source Code
+                                    <a href={currentProject?.sourceCode} target="_blank">
 
-                                    </button>
-                                    <button>
-                                        Go to Website
-                                    </button>
+                                        <button>
+                                            Source Code
+
+                                        </button>
+                                    </a>
+                                    <a href={currentProject?.url} target="_blank">
+
+                                        <button>
+                                            Go to Website
+                                        </button>
+                                    </a>
                                 </div>
 
                             </div>
@@ -203,19 +223,23 @@ const AppAlone = () => {
                     <div className='app_alone_page_header'>
 
                         <div className='start_ratingBox'>
-                            <span className='rating_text'> Rate The Project</span>
-                            <Rating name="size-large" value={+defaultData.defaultRating} size="large" />
+                            <span className='rating_text'> {value ? "Your Rating to this project" : "Rate The Project"}</span>
+                            <Rating onChange={(e, newValue) => setValue(newValue)} name="size-large" value={value} size="large" />
                         </div>
-                        <h3 className='section_title'>
-                            Application pages view
-                        </h3>
+                        <div className='applicationPageHeader'>
+                            <img src="/assets/images/smPage.png" alt="pageIcon" />
+                            <h3 className='appAlonePageViewText'>
+
+                                <span> {currentProject?.name}     </span>  pages view
+                            </h3>
+                        </div>
                     </div>
                     <div className='project_page_photo_container'>
                         <div className='project_page_name_list'>
                             {
 
                                 currentProject?.pages?.map((page) => (
-                                    <div key={page} className={`project_cat_list_item ${currentPage.index === page.name ? "activeCat" : ""} `} onClick={() => setCurrentPage((prev) => ({ ...prev, index: page.name, data: page }))} >
+                                    <div key={page} className={`project_cat_list_item pageNameBtn ${currentPage.index === page.name ? "activeCat" : ""} `} onClick={() => setCurrentPage((prev) => ({ ...prev, index: page.name, data: page }))} >
                                         {page.name}
                                     </div>
                                 ))

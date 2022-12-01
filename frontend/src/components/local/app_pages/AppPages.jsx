@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react"
 import AspectRatioIcon from '@mui/icons-material/AspectRatio';
 import "./app_pages.css"
-import Nightlight from "@mui/icons-material/Nightlight";
-import { LightMode } from "@mui/icons-material"
+import { BsArrowsFullscreen } from "react-icons/bs"
 import ImageModal from "../../global/modal/ImageModal/ImageModal";
 const AppPages = ({ page, project }) => {
     const [theme, setTheme] = useState("light")
     const [pagePhoto, setPagePhoto] = useState()
+    const [hover, setHover] = useState(false)
     const [ActionButton, setActionButton] = useState({
         darkMode: false,
         isExpanded: false
@@ -36,22 +36,16 @@ const AppPages = ({ page, project }) => {
         <div className="project_page_item">
             <div className='project_page_name'>
                 <div className="project_page_details">
-                    <div className="project_page_details_actions">
 
-
-                        <Nightlight className="expandIcon appAlone_actionBtn" />
-
-                        <LightMode className="expandIcon appAlone_actionBtn" />
-                        <ImageModal handleCloseExpand={() => setActionButton((prev) => ({ ...prev, isExpanded: !prev.isExpanded }))} currentImage={pagePhoto}>
-                            <AspectRatioIcon onClick={() => setActionButton((prev) => ({ ...prev, isExpanded: !prev.isExpanded }))} className={`expandIcon appAlone_actionBtn ${ActionButton.isExpanded ? "isExpand" : ""}`} />
-                        </ImageModal>
-
-                    </div>
-                    <span className="project_page_name">{page?.name}</span>
-
+                    <img style={{ width: "90%" }} src="/assets/images/page.png" alt="web pages" />
                 </div>
             </div>
-            <div className="project_page_image_wrapper">
+            <div className={`project_page_image_wrapper ${hover ? "showBg" : ""}`} onMouseLeave={() => setHover(false)} onMouseOver={() => setHover(true)}>
+                <div className="projectPage_hoverImg">
+                    <ImageModal setIsHoverClose={() => setHover(false)} handleCloseExpand={() => setActionButton((prev) => ({ ...prev, isExpanded: !prev.isExpanded }))} currentImage={pagePhoto}>
+                        <BsArrowsFullscreen onClick={() => setActionButton((prev) => ({ ...prev, isExpanded: !prev.isExpanded }))} className={`expandIcon appAlone_actionBtn ${ActionButton.isExpanded ? "isExpand" : ""}`} />
+                    </ImageModal>
+                </div>
 
                 <img draggable={"false"} className='project_page_img' src={pagePhoto} alt={page?.name} />
             </div>

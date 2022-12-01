@@ -5,7 +5,7 @@
 
 // ******************
 import { Canvas, useFrame, useLoader } from "react-three-fiber"
-import { Suspense, useEffect } from "react"
+import { Suspense, useEffect, useState } from "react"
 import { OrbitControls, useTexture } from "@react-three/drei"
 import { useRef } from "react"
 import { TextureLoader } from "three"
@@ -306,6 +306,21 @@ function BannerAnimation() {
 
 
 
+    const [animateWidth, setAnimateWidth] = useState(window.innerWidth / 2)
+
+    useEffect(() => {
+
+
+        window.addEventListener("resize", () => {
+            setAnimateWidth(window.innerWidth / 2)
+        })
+
+
+
+
+    }, [])
+
+    console.log(animateWidth, "the animate width")
 
 
 
@@ -313,17 +328,22 @@ function BannerAnimation() {
     return <>
 
         <>
-            <div className="bannerAnimationBox"></div>
+            <div style={{
+
+                width: `${animateWidth}px`,
+
+            }} className="bannerAnimationBox"></div>
             <div
                 style={{
-                    flex: 7,
+                    width: `${animateWidth}px`,
                     height: '100vh',
-                    opacity: 0.5
+                    opacity: 0.5,
 
                 }}
             >
 
                 <Canvas
+
                     shadowMap
                     camera={{ position: [-1.22, 5, 12], fov: 75 }}
                 >

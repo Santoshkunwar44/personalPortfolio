@@ -4,6 +4,7 @@
   height: 100vh;
   max-height: 100vh;
   position: relative;
+  background-color: #f4f7fa2e;
 }
 .projectSidebar.expand {
   flex: 3;
@@ -165,10 +166,12 @@ input[type="checkbox"] {
   font-size: 12px;
 }
 .expand .sidebarSm_toggleBar {
+  height: 50px;
   margin-bottom: 0;
 }
 .sidebarSm_toggleBar {
   display: flex;
+  height: 50px;
   justify-content: center;
   align-items: center;
   background-color: rgba(130, 8, 245, 0.856);
@@ -186,10 +189,10 @@ input[type="checkbox"] {
 }
 .sidebarSm_toggleBar span {
   letter-spacing: 1.1px;
-  font-size: 14px;
+  font-size: 18px;
 }
 .sidebarSm {
-  opacity: 0.4;
+  opacity: 0.5;
 }
 @media screen and (max-width: 1200px) {
   .sidebarSm {

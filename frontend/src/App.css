@@ -134,8 +134,8 @@ button:hover {
 .css-118zhtq-MuiButtonBase-root-MuiFab-root-MuiSpeedDial-fab {
   background: rgb(111, 30, 233) !important;
   font-size: 2rem !important;
-  width: 5rem !important;
-  height: 5rem !important;
+  width: 4rem !important;
+  height: 4rem !important;
   background: linear-gradient(
     45deg,
     rgba(111, 30, 233, 0.7321814254859611) 16%,

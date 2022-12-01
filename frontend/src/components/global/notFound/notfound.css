@@ -2,3 +2,25 @@
   display: grid;
   place-items: center;
 }
+.notFound h1 {
+  font-size: 2.7rem;
+  color: rgba(137, 43, 226, 0.623);
+  letter-spacing: 1.1px;
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.notFound p {
+  color: gray;
+  font-size: 17px;
+  letter-spacing: 1.1px;
+  font-family: "poppins";
+}
+.searchAgainBtn {
+  width: 125px;
+  padding: 10px 5px;
+  font-size: 16px;
+  margin-top: 3rem;
+  letter-spacing: 1.1px;
+  background: var(--gradient_bg);
+  color: white;
+}

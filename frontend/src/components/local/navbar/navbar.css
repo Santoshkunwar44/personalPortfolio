@@ -39,19 +39,55 @@
   display: flex;
   align-items: center;
   padding-right: 2rem;
+  gap: 1rem;
 }
 .nav_list_item {
-  margin-left: 40px;
   color: rgb(77, 75, 75);
   letter-spacing: 1.2px;
   font-size: 16px;
   font-weight: 500;
-  font-family: "Poppins", sans-serif;
   cursor: pointer;
+  font-family: "poppins";
 }
 
-@media screen and (max-width: 1024px) {
+.activeNav {
+  position: relative;
+  display: inline-block;
+  transition: all 0.3s ease;
+}
+
+.activeNav::after {
+  content: "";
+  width: 80%;
+  height: 3px;
+  border-radius: 20px;
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background: var(--gradient_bg);
+  bottom: -1rem;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
   .nav_list_item {
-    font-size: 12px;
+    font-size: 10px;
+    font-weight: 100;
   }
+}
+
+@media only screen and (max-width: 888px) {
+  .nav_list_item {
+    font-size: 11px;
+    font-weight: 100;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
 }

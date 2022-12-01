@@ -33,10 +33,10 @@
   color: rgb(143, 143, 143);
 }
 .left {
-  flex: 5;
+  flex: 7;
 }
 .right {
-  flex: 7;
+  flex: 5;
 }
 .project_info_main {
   margin-bottom: 1rem;
@@ -109,7 +109,20 @@
   border-bottom: 0.3px solid #dcdcdc5e;
   justify-content: center;
   align-items: center;
-  padding-top: 2rem;
+  padding: 2rem 0;
+
+  background-color: rgb(244, 247, 250);
+}
+.appAlonePageViewText {
+  font-family: "Space Grotesk", sans-serif;
+  font-size: 1.5rem;
+  letter-spacing: 1.1px;
+  color: rgba(35, 42, 83, 0.658);
+}
+.appAlonePageViewText span {
+  font-size: 2.4rem;
+  margin-right: 15px;
+  color: rgb(255, 8, 181);
 }
 .appAlone_header_button {
   display: flex;
@@ -117,10 +130,11 @@
   margin: 2rem;
 }
 .appAlone_header_button button {
-  padding: 9px 25px;
+  padding: 13px 10px;
   background: var(--gradient_bg_light);
+  font-style: "poppins";
   color: white;
-  border-radius: 25px 3px;
+  border-radius: 3px;
 }
 .appAlone_header_bottom {
   display: flex;
@@ -131,4 +145,23 @@
   color: gray;
   font-family: var(--poppins);
   letter-spacing: 1.1px;
+}
+.project_page_photo_container {
+  padding-bottom: 3rem;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+.pageNameBtn {
+  border-radius: 3px;
+}
+.applicationPageHeader {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding-left: 5rem;
+}
+
+@media screen and (max-width: 1024px) {
+  .featuresLi {
+    margin-bottom: 0.8rem;
+  }
 }

@@ -10,6 +10,7 @@ import { useEffect, useRef, useState } from "react"
 import "./home.css"
 import About from "../../components/local/aboutMe/About"
 import Contact from "../../components/contact/Contact"
+import { motion } from "framer-motion"
 const Home = () => {
     const homeContainerRef = useRef();
     const [goUpWarn, setGoUpWarn] = useState(false)
@@ -32,7 +33,20 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="main_container">
+            <motion.div
+                initial={{
+                    opacity: 0.4,
+                    x: "-300px",
+                    y: "100px"
+                }}
+                animate={{
+                    opacity: 1,
+                    x: "0",
+                    y: "0"
+                }}
+
+                transition={{ duration: 1 }}
+                className="main_container">
                 <BannerContainer />
                 <div className={`home_box`} ref={homeContainerRef}>
                     {/* <div onClick={() => window.scrollTo(0, 0)} className={`goUPArrow ${goUpWarn ? "goUpWarn" : ""}`}>
@@ -47,7 +61,7 @@ const Home = () => {
                     <Contact />
                     <Footer />
                 </div>
-            </div>
+            </motion.div>
         </>
     )
 }

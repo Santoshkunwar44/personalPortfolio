@@ -36,6 +36,7 @@ const Project = ({ item, mini, index, mid }) => {
     return (
 
         <motion.div
+            onClick={() => navigate(`/projects/single/${item?._id}`)}
             ref={ref}
             initial={{ opacity: 0, scale: 0.8, x: "200px" }}
             animate={animate}
