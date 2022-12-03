@@ -115,7 +115,6 @@ const AppAlone = () => {
 
     return (
         <>
-            <Navbar />
             <div className='app_alone'>
                 <div className='project_main'>
                     <div className="project_details_appAlone left">

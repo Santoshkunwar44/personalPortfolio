@@ -58,6 +58,7 @@
 }
 .project_page_details {
   display: flex;
+  background: #ffffff;
   align-items: center;
   flex-direction: column;
   gap: 30px;

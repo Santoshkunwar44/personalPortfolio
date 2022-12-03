@@ -148,10 +148,13 @@
 }
 .project_page_photo_container {
   padding-bottom: 3rem;
+  background: #ebebeb57;
   box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
 }
 .pageNameBtn {
   border-radius: 3px;
+  letter-spacing: 1.1px;
+  background: #ffffff !important;
 }
 .applicationPageHeader {
   display: flex;

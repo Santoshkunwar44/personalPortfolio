@@ -328,12 +328,9 @@ function BannerAnimation() {
     return <>
 
         <>
-            <div style={{
 
-                width: `${animateWidth}px`,
-
-            }} className="bannerAnimationBox"></div>
             <div
+                className="bannerAnimationBox"
                 style={{
                     width: `${animateWidth}px`,
                     height: '100vh',

@@ -24,7 +24,7 @@ const Contact = () => {
                     scale: 1
                 }}
 
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.41 }}
                 className='contact mid_width'>
                 <div className='personal'>
 
@@ -35,7 +35,7 @@ const Contact = () => {
                         <h1>I am Freelance Fullstack developer, </h1>
                         <h1>working globally </h1>
                         <span className='PersonalsmallText'>Available for New Opportunity</span>
-                        <button className='cv_button personalBtn'> <SimCardDownloadIcon className='downloadIconIcon' /> <span>Download CV</span></button>
+                        <button className='personalBtn'> <SimCardDownloadIcon className='downloadIconIcon' /> <span>Download CV</span></button>
                     </div>
 
 

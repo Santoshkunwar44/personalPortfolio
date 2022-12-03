@@ -12,7 +12,7 @@ const ResetPage = () => {
     const otpInfo = useSelector((state) => state.utilityReducer)
     const navigate = useNavigate()
     const [email, setEmail] = useState('')
-
+    const [error, setError] = useState("")
 
     const handleSubmit = async () => {
 
@@ -21,7 +21,9 @@ const ResetPage = () => {
             dispatch(setOtpInfo({ type: "setOtpInfo", data: data.message }))
             navigate("/verify_otp")
         } catch (error) {
-            console.log(error)
+            let errorText = error?.response?.data?.message;
+            if (!errorText) return
+            setError(errorText)
         }
     }
 
@@ -47,10 +49,12 @@ const ResetPage = () => {
                 <button onClick={handleSubmit} className="send_verfification_code_btn">
                     SEND VERFICATION CODE
                 </button>
-
+                {
+                    error && <p className="errorText">{error}</p>
+                }
             </div>
             <div className="down_box">
-                <span>Do not have account ? <span className="signUp_text">Sign up </span> </span>
+                <span>Back to Login . <span className="signUp_text" onClick={() => navigate("/authenticate")}>Login  </span> </span>
             </div>
         </div >
     )

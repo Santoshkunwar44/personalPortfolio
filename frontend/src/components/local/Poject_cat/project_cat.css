@@ -47,7 +47,7 @@
 }
 
 .activeCat {
-  background: var(--dark_gradient);
+  background: var(--dark_gradient) !important;
   color: white;
   transform: scale(1.12);
 }

@@ -17,6 +17,7 @@ const Side = () => {
         }
     }
 
+
     return (
         <div className={`${show ? "show" : ""} side_nav`}>
             <div>

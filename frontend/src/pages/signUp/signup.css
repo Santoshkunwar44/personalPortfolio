@@ -85,9 +85,7 @@
 .or_text {
   color: rgba(167, 167, 167, 0.801);
 }
-.loginWithBox {
-  margin: 0 auto;
-}
+
 .loginWith {
   display: flex;
   align-items: center;

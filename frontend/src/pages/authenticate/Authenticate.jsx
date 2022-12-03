@@ -61,7 +61,7 @@ const Authenticate = () => {
                     <div className="divider"></div> <span className="or_text">Or</span>
                     <div className="divider"></div>
                 </div>
-                <div className="loginWithBox">
+                <div className="loginWithBoxAuth">
 
                     <div className="loginWith">
                         <img src="https://img.icons8.com/color/48/null/facebook.png" />

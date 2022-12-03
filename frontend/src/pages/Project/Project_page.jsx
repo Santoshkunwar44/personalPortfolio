@@ -30,7 +30,7 @@ const ProjectAdminDash = () => {
                     scale: 1
                 }}
 
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.41 }}
                 className="dashboardContainer">
                 {
                     showSidebar ? <Sidebar toggleSidbarExpand={() => setSidebarExpand(!sidebarExpand)} sidebarExpand={sidebarExpand} expandSidebarFunction={() => { setSidebarExpand(true); console.log("clicked") }} /> : null

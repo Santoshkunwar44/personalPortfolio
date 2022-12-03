@@ -1,14 +1,12 @@
 .side_nav {
-  position: fixed;
-  top: 3rem;
+  position: sticky;
+  top: 9rem;
   left: 0.5rem;
   z-index: 999999;
   display: none;
   transition: all 0.3s ease;
 }
-.show {
-  display: block;
-}
+
 .sideItem {
   display: flex;
   gap: 0.6rem;
@@ -19,6 +17,8 @@
 }
 .sideItem:hover {
   scale: 1.1;
+  color: red;
+  transform: translateX(20px);
 }
 .sideItem span {
   color: rgba(128, 128, 128, 0.678);
@@ -39,35 +39,17 @@
   .side_nav {
     display: none;
   }
-  /* .sideItem {
-    margin-bottom: 1rem;
-    display: none;
-  }
-  .sideItem span {
-    font-size: 13px !important;
-    color: red;
-  }
-  .sideItem img {
-    width: 35px;
-  }
-  .vrLine {
-    height: 3rem;
-    margin: 0.3rem;
-    margin-left: 1.2rem;
-  } */
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
   .side_nav {
-    /* display: block; */
     top: 4rem;
     display: none;
   }
 }
 @media screen and (min-width: 1280px) {
   .side_nav {
-    top: 4rem;
     left: 0.5rem;
-    display: none;
+    position: fixed;
   }
   .show {
     display: block;

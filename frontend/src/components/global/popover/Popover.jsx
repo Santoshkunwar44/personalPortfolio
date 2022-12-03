@@ -7,15 +7,17 @@ import {
     PopoverArrow,
     Button
 } from '@chakra-ui/react'
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
+import Draggable from 'react-draggable'
 import { useDispatch, useSelector } from "react-redux"
+import { setHidePopOver } from '../../../redux/action/utilityAction'
 import { getChatApi } from '../../../utility/urls/chat'
 import { addMessageApi, addNewMessageApi, getMessageApi } from '../../../utility/urls/message'
 import "./popover.css"
 const Pops = ({ children }) => {
 
 
-
+    const { showPopOver } = useSelector((state) => state.utilityReducer)
     const user = useSelector((state) => state.authReducer.user)
     const [message, setMessage] = useState("")
     const [chatId, setChatid] = useState(null)
@@ -23,7 +25,6 @@ const Pops = ({ children }) => {
     const dispatch = useDispatch()
 
 
-    console.log("the current user", user)
     useEffect(() => {
         getChat()
     }, [user?._id])
@@ -133,49 +134,61 @@ const Pops = ({ children }) => {
         dispatch({ type: "showLoginModal" })
     }
 
+    const popBtnRef = useRef()
+    useEffect(() => {
+        if (!showPopOver) return
+        popBtnRef.current.click()
+    }, [showPopOver])
+
+    const handleClose = () => {
+        dispatch(setHidePopOver())
+    }
+
+
     return (
-        <Popover placement='left'>
-            <PopoverTrigger>
-                <span style={{ margin: "0", padding: "0" }} >{children}</span>
-            </PopoverTrigger>
-            <PopoverContent borderRadius={"30px"} overflow={"hidden"} boxShadow={"0 0 4px 4px gainsboro"} height={500} width={360} backgroundColor={"white"} color={"black"}>
-                {/* <PopoverArrow /> */}
-                {/* <PopoverCloseButton /> */}
+        <Draggable>
+            <Popover closeOnBlur onClose={handleClose} style={{ position: "absolute", bottom: "2rem", right: "3rem" }} placement='left'>
+                <PopoverTrigger>
+                    <span ref={popBtnRef} style={{ margin: "0", padding: "0" }} >{children}</span>
+                </PopoverTrigger>
+                <PopoverContent borderRadius={"30px"} overflow={"hidden"} boxShadow={"0 0 4px 4px gainsboro"} height={500} width={360} backgroundColor={"white"} color={"black"}>
 
-                <PopoverHeader >
-                    <div className='popoverHeader'>
-                        <img className='popOver_userImg' draggable={false} src="/assets/images/user.jpg" alt="user_photo" />
-                        <div>
-                            <h2>Santosh Kunwar </h2>
+
+                    <PopoverHeader >
+                        <div className='popoverHeader'>
+                            <img className='popOver_userImg' draggable={false} src="/assets/images/user.jpg" alt="user_photo" />
+                            <div>
+                                <h2>Santosh Kunwar </h2>
+                            </div>
                         </div>
-                    </div>
-                </PopoverHeader>
+                    </PopoverHeader>
 
-                <PopoverBody>
-                    <div className='chatBody'>
-                        {
-                            chatMessage?.length > 0 ? <div className='msg_box'>
-                                {
-                                    chatMessage.map((msg) => (
-                                        <div className={`message ${msg.senderId._id === user._id && "own"}`}>
-                                            {msg.content}
-                                        </div>
-                                    ))
-                                }
-                            </div> :
-                                <div className="initialText">
-                                    <h3 >Start Conversation</h3>
-                                    <button className='sayHiButton'>Say Hii !!</button>
-                                </div>
-                        }
-                        {
-                            user ? <input value={message} onChange={(e) => setMessage(e.target.value)} onKeyDown={handleKeyDown} type="text" name="" id="" placeholder='Leave message ...' /> : <span onClick={handleOpenModal}>Login to proceed</span>
-                        }
+                    <PopoverBody>
+                        <div className='chatBody'>
+                            {
+                                chatMessage?.length > 0 ? <div className='msg_box'>
+                                    {
+                                        chatMessage.map((msg) => (
+                                            <div className={`message ${msg.senderId._id === user._id && "own"}`}>
+                                                {msg.content}
+                                            </div>
+                                        ))
+                                    }
+                                </div> :
+                                    <div className="initialText">
+                                        <h3 >Start Conversation</h3>
+                                        <button className='sayHiButton'>Say Hii !!</button>
+                                    </div>
+                            }
+                            {
+                                user ? <input value={message} onChange={(e) => setMessage(e.target.value)} onKeyDown={handleKeyDown} type="text" name="" id="" placeholder='Leave message ...' /> : <span onClick={handleOpenModal}>Login to proceed</span>
+                            }
 
-                    </div>
-                </PopoverBody>
-            </PopoverContent>
-        </Popover >
+                        </div>
+                    </PopoverBody>
+                </PopoverContent>
+            </Popover >
+        </Draggable>
     )
 }
 

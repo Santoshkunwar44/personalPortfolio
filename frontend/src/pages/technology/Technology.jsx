@@ -179,7 +179,7 @@ const Technology = () => {
             <motion.div
                 initial={{
                     opacity: 0.4,
-                    x: "-300px",
+                    x: "-100px",
                     scale: 0.7
                 }}
                 animate={{
@@ -188,7 +188,7 @@ const Technology = () => {
                     scale: 1
                 }}
 
-                transition={{ duration: 1 }}
+                transition={{ duration: 0.41 }}
                 className="technology">
                 <Navbar />
                 <div className="technologyWrapper">

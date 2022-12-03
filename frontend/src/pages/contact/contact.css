@@ -4,7 +4,6 @@
   padding-top: 14rem;
   position: relative;
   z-index: 200;
-  margin-bottom: 2rem;
   border-bottom: 0.4px solid rgba(128, 128, 128, 0.205);
 }
 
@@ -39,11 +38,18 @@
   font-family: "Space Grotesk", sans-serif;
 }
 .personalBtn {
-  justify-content: center;
-  text-align: center;
-  font-size: 20px;
-  width: 300px !important;
-  margin-top: 6rem !important;
+  width: 380px !important;
+  height: 60px !important;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  background: var(--gradient_bg);
+  color: white;
+  padding: 8px 23px;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+  border-radius: 3px;
 }
 .personalBtn span {
   font-size: 24px !important;
@@ -58,18 +64,81 @@
 .contact {
   min-height: 100vh;
 }
-.cv_button {
-  margin-top: 2rem;
-  background: var(--gradient_bg);
-  color: white;
-  padding: 6px 8px;
-  width: 200px;
-  height: 40px;
-  letter-spacing: 1.1px;
-  text-transform: uppercase;
-  border-radius: 3px;
-}
+
 .downloadIconIcon {
   cursor: pointer !important;
   width: 2.8rem !important;
+}
+@media only screen and (max-width: 600px) {
+  .personal {
+    padding-top: 9rem;
+    padding-bottom: 4rem;
+  }
+  .personlHeadingText h1 {
+    line-height: 34px;
+    font-size: 1.3rem;
+  }
+  .PersonalsmallText {
+    font-size: 14px;
+  }
+  .personalBtn {
+    width: 250px !important;
+    height: 50px !important;
+    gap: 1rem;
+    padding: 8px 10px;
+  }
+  .personalBtn span {
+    font-size: 20px !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .personalBtn span {
+    font-size: 20px !important;
+  }
+  .personalBtn {
+    width: 250px !important;
+    height: 50px !important;
+    gap: 1rem;
+    padding: 8px 10px;
+  }
+  .personal {
+    padding-bottom: 4rem;
+    padding-top: 9rem;
+  }
+  .personlHeadingText h1 {
+    line-height: 34px;
+    font-size: 1.3rem;
+  }
+  .PersonalsmallText {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  .personal {
+    padding-top: 7rem;
+    padding-bottom: 4rem;
+  }
+  .personlHeadingText h1 {
+    line-height: 50px;
+    letter-spacing: 1.05px;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 2.3rem;
+  }
+  .PersonalsmallText {
+    margin-top: 2rem;
+    color: gray;
+    font-size: 17px;
+  }
+  .personalBtn {
+    width: 270px !important;
+    height: 60px !important;
+    gap: 1rem;
+    padding: 8px 10px;
+  }
+  .personalBtn span {
+    font-size: 20px !important;
+  }
+  .personalBtn {
+    margin-top: 3rem !important;
+  }
 }

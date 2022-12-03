@@ -162,3 +162,10 @@
   color: rgba(131, 25, 230, 0.911);
   transform: scale(1.1);
 }
+.errorText {
+  color: rgb(221, 29, 29);
+  font-size: 12px;
+  padding-top: 2rem;
+  letter-spacing: 1.1px;
+  font-family: "poppins";
+}
