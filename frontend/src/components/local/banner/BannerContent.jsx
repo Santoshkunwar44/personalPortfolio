@@ -1,10 +1,8 @@
-import LoginModal from "../../global/modal/LoginModal/LoginModal"
-import GuidePop from "../../global/popover/Initial"
-import Pops from "../../global/popover/Popover"
-import DownloadForOfflineOutlinedIcon from '@mui/icons-material/DownloadForOfflineOutlined';
+
 import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
 import "./banner.css"
 import { useEffect, useState } from "react";
+import { saveAs } from 'file-saver';
 // function Scene() {
 //     return (
 //         <mesh >
@@ -42,6 +40,12 @@ const BannerContent = () => {
 
     }, [])
 
+    const handleDownloadImg = () => {
+
+        saveAs("https://scontent.fbwa1-1.fna.fbcdn.net/v/t39.30808-6/316134882_710960334079288_1990516657882085491_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=174925&_nc_ohc=W9QzG93JjEcAX8D_iUz&_nc_ht=scontent.fbwa1-1.fna&oh=00_AfA5X9j_6CNkrwblbFOn35bbMDr_VoxTf6YUj7kPPFZJ9w&oe=6394EA17", "Santosh CV")
+
+    }
+
     return (
         <>
             <div className='banner' style={{ width: `${animateWidth}px` }}>
@@ -68,8 +72,8 @@ const BannerContent = () => {
                             <p>I'm an IT enthusiast ,  been graduating in Bachelor in Computer Application (BCA)
                                 Intimacy with the Web technologies , obsessed with computer books & affection with bugs</p>
                             <p>Mind Blowing projects are my experiences in which  you should your eyes  on </p>
-                            <button className='cv_button bannerCvButton  bannerButton'> <SimCardDownloadIcon className={"bannerCvDownloadIcon "}
-                            /> <span>Download Cv</span></button>
+                            {/* <button onClick={handleDownloadImg} className='cv_button bannerCvButton  bannerButton'>Download Cv</button> */}
+                            <button className='cvButtonBanner' onClick={handleDownloadImg}>     <SimCardDownloadIcon onClick={handleDownloadImg} /> DOWNLOAD CV</button>
                         </div>
                     </div>
                 </div>

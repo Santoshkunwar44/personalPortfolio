@@ -15,7 +15,7 @@ import { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import "./loginModal.css"
 import { useDispatch } from 'react-redux'
-import { setHideLoginModa } from '../../../../redux/action/utilityAction'
+import { setHideLoginModa, setToastInfo } from '../../../../redux/action/utilityAction'
 function LoginModal() {
 
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -28,6 +28,7 @@ function LoginModal() {
 
     const handleLoginWith = () => {
         window.open("http://localhost:8000/api/passport/google", "_self")
+        dispatch(setToastInfo({ title: "Login Successfull", desc: "You are loggedin successfully", type: "success" }))
         handleClose()
     }
 
@@ -47,8 +48,8 @@ function LoginModal() {
                 isOpen={isOpen}
                 onBlur={handleClose}
                 onClose={handleClose} >
-                <ModalOverlay width={"100vw"} height={"100vh"} />
-                <ModalContent position={"relative"} zIndex={999} borderRadius={"10px"} padding={"0rem"} margin={"0em auto"} marginTop={"6em"} width={"40%"} backgroundColor={"#ffffff"} boxShadow={"0 0 4px 4px gainsboro"} >
+                <ModalOverlay width={"100vw"} height={"fit-content"} />
+                <ModalContent height={"fit-content"} position={"relative"} zIndex={999} borderRadius={"10px"} padding={"0rem"} paddingBottom={"1rem"} margin={"0em auto"} marginTop={"6em"} width={"40%"} backgroundColor={"#ffffff"}  >
                     <div className='loginModalHeaderBox' style={{ height: "70px" }}>
                         <div className='loginModalLogoBox'>
                             <img src='/assets/images/logoMain.png' alt="brainySantoshLogo" />
@@ -69,7 +70,6 @@ function LoginModal() {
                         </div>
                         <div className="loginWithBox">
                             <div className='loginWithWrapper'>
-
                                 <div className="loginWith">
                                     <img src="https://img.icons8.com/color/48/null/facebook.png" />
                                     <span className='loginWithText'>

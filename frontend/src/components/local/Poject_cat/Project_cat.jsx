@@ -26,9 +26,8 @@ const Project_cat = () => {
 
         if (inView) {
             animation.start({
-                y: "0px",
+                x: 0,
                 opacity: 1,
-                scale: 1,
                 transition: {
                     duration: 1,
                 }
@@ -36,9 +35,8 @@ const Project_cat = () => {
         }
         if (!inView) {
             animation.start({
-                y: "-200px",
+                x: 0,
                 opacity: 0,
-                scale: 0.8,
                 transition: {
                     duration: 1,
                 }
@@ -76,7 +74,7 @@ const Project_cat = () => {
 
     return (
         <motion.section
-            initial={{ opacity: 0, y: "-200px" }}
+            initial={{ opacity: 0, x: 0 }}
             animate={animation}
             ref={ref}
             className='project_cat section mini-container'>

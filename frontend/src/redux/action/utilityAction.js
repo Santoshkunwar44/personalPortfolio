@@ -26,3 +26,9 @@ export const setHidePopOver = () => async (dispatch) => {
 }
 
 
+export const setToastInfo = (data) => async (dispatch) => {
+    dispatch({ type: "addToastInfo", payload: data })
+}
+export const setRemoveToastInfo = () => async (dispatch) => {
+    dispatch({ type: "removeToastInfo" })
+}

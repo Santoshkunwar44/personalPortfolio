@@ -1,6 +1,16 @@
 
 
-const utilityReducer = (state = { data: null, showLoginModal: false, showPopOver: false, otpData: null }, action) => {
+const utilityReducer = (state = {
+    data: null,
+    showLoginModal: false,
+    showPopOver: false,
+    otpData: null,
+    toastInfo: {
+        title: "",
+        desc: "",
+        type: ""
+    }
+}, action) => {
     switch (action.type) {
         case "setFilteredData":
             return { ...state, data: action.payload }
@@ -15,6 +25,12 @@ const utilityReducer = (state = { data: null, showLoginModal: false, showPopOver
 
         case "setHidePopOver":
             return { ...state, showPopOver: false }
+
+        case "addToastInfo":
+            return { ...state, toastInfo: action.payload }
+        case "removeToastInfo":
+            return { ...state, toastInfo: { title: "", desc: "", type: "" } }
+
         case "setOtpInfo":
             return { ...state, otpData: action.payload.data }
         default:

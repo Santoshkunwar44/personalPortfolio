@@ -128,7 +128,7 @@ const Technology = () => {
         }
         if (!inView) {
             animation.start({
-                x: "300px",
+                x: "100px",
                 scale: 0.8,
                 opacity: 0
             })
@@ -193,9 +193,8 @@ const Technology = () => {
                 <Navbar />
                 <div className="technologyWrapper">
                     <Technologies />
-
                     <motion.div
-                        initial={{ scale: 0.8, x: "-300px", opacity: 0 }}
+                        initial={{ scale: 0.8, x: "-100px", opacity: 0 }}
                         animate={animation}
                         ref={ref}
                         transition={{ duration: 1 }}

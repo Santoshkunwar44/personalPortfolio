@@ -63,6 +63,7 @@ const Contact = () => {
                     Let's Work Together
                 </motion.h2>
                 <motion.p
+                    className="contact_com_text"
                     ref={ref}
                     initial={{ x: "300px", scale: 0.6, opacity: 0 }}
                     animate={animation}

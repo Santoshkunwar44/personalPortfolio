@@ -59,3 +59,10 @@
   position: relative;
   display: inline-flex;
 }
+
+@media screen and (max-width: 768px) {
+  .projects_header p {
+    font-size: 12px;
+    font-family: "Space Grotesk", sans-serif;
+  }
+}

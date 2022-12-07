@@ -17,10 +17,9 @@
   scroll-snap-align: start;
 }
 .technologies_innerbox {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   padding: 0rem 0;
-  width: 1024px;
 }
 .technologies_list {
   flex-wrap: wrap;
@@ -139,8 +138,60 @@ letter-spacing: 1.1px;
 transition: all 0.3s ease;
 border-radius: 26px;
 box-shadow: 6px 10px 9px -1px #cecece57; */
+@media screen and (max-width: 600px) {
+  p .active_tool::after {
+    width: 50px;
+  }
+  .link_item {
+    height: 45px;
+  }
+  .technologies_tab_item {
+    font-size: 9px;
+  }
+  .technologies_tab_item {
+    padding: 9px 10px;
+  }
+  .technologies_tab_list {
+    gap: 10px;
+  }
+  .technologies_list {
+    width: 90%;
+    gap: 16px;
+  }
+  .technology_item {
+    width: 45px;
+    height: 45px;
+    padding: 0px;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  p .active_tool::after {
+    width: 50px;
+  }
+  .link_item {
+    height: 45px;
+  }
+  .technologies_tab_item {
+    font-size: 10px;
+  }
+  .technologies_tab_item {
+    padding: 7px 10px;
+  }
+  .technologies_tab_list {
+    gap: 10px;
+  }
+  .technologies_list {
+    width: 100%;
+    gap: 16px;
+  }
+  .technology_item {
+    width: 45px;
+    height: 45px;
+    padding: 0px;
+  }
+}
 
-@media screen and (max-width: 1024px) {
+@media screen and (min-width: 768px) and (max-width: 1024px) {
   .link_item {
     height: 50px;
   }

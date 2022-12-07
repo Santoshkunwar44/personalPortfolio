@@ -35,7 +35,7 @@ const Technologies = () => {
         }
         if (!inView) {
             animation.start({
-                x: "-300px",
+                x: "-100px",
                 opacity: 0,
                 scale: 0.8,
                 transition: {

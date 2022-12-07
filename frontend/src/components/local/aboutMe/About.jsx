@@ -48,7 +48,7 @@ const About = () => {
         }
         if (!inView) {
             animation.start({
-                x: "-300px",
+                x: "-150px",
                 opacity: 0,
                 scale: 0.8,
                 transition: {
@@ -87,7 +87,7 @@ const About = () => {
 
 
             <motion.div
-                initial={{ opacity: 0, scale: 0.8, x: "-300px" }}
+                initial={{ opacity: 0, scale: 0.8, x: "-150px" }}
                 animate={animation3}
                 transition={{ duration: 1, type: "spring", stiffness: 100, bounce: 0.3, delay: 0.2 }}
                 className="aboutMe_left">

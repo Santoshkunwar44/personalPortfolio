@@ -19,7 +19,6 @@ passport.use(new GoogleStrategy({
 
         try {
             const theGoogleUser = await createGoogleUser(googleUser)
-            console.log("in the passport", theGoogleUser)
             done(null, theGoogleUser)
         } catch (error) {
             console.log(error)

@@ -82,7 +82,16 @@
   color: rgb(43, 42, 42);
   letter-spacing: 1.1px;
 }
+.sentEmailBtn {
+  width: 100px;
+  height: 44px;
+  font-size: 18px;
+  background-color: blueviolet;
+  border-radius: 5px;
 
+  color: white;
+  letter-spacing: 1.1px;
+}
 @media only screen and (max-width: 1024px) {
   .formContainer {
     width: 80%;

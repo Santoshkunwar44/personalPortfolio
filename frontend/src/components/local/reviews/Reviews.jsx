@@ -52,26 +52,24 @@ const Reviews = () => {
             <div className="reviewsWrapper">
                 <div className='reviewsLeft'>
 
-                    <motion.img
+                    {/* <motion.img
                         whileHover={{ scale: 1.2 }}
                         transition={{ duration: .3 }}
                         className="fiverMainImg" src="/fiverMain.png" alt="" />
                     <a href="https://www.fiverr.com/santoshkunwa442?up_rollout=true" target={"_blank"}>
                         <button className="fiverBtn"> <img width={'45px'} src="/fiverlogo.png" alt="fiverimg" />  <span>Visit Profile</span> </button>
                     </a>
+                     */}
+                    <p> <h3 style={{ display: "inline-block" }}>F</h3> reelancing is a best way to globalize your skills and built a self-confindence & experiences . I have been upgrading my skills so I can provide the  satisfactory products to my clients as they asked for . </p>
+                    <p>I have been providing services to the clients in the fiver platform as a Fullstack Mern Devloper . And every clients upto the date are appreciating with my works and providing me full ratings and good Reviews</p>
                 </div>
                 <div className='reviewsRight'>
 
 
-                    <p> <h3 style={{ display: "inline-block" }}>F</h3> reelancing is a best way to globalize your skills and built a self-confindence & experiences . I have been upgrading my skills so I can provide the  satisfactory products to my clients as they asked for . </p>
-                    <p>I have been providing services to the clients in the fiver platform as a Fullstack Mern Devloper . And every clients upto the date are appreciating with my works and providing me full ratings and good Reviews</p>
 
                     <div className="reviewsImage">
                         <motion.img
-                            transition={{ duration: .3 }}
-                            whileHover={
-                                { scale: 1.2 }
-                            }
+
                             src="/reviews.png" alt="reviewsImg" />
 
                     </div>

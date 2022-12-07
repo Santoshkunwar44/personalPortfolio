@@ -82,3 +82,69 @@
   letter-spacing: 1.1px;
   color: rgba(128, 128, 128, 0.705);
 }
+@media screen and (max-width: 600px) {
+  .contactCom_instantMsg {
+    width: 70px;
+    height: 70px;
+  }
+  .contactInfoDetail {
+    padding: 20px 32px;
+  }
+  .contactInfoDetail h2 {
+    font-size: 2.6rem;
+  }
+  .contact_com_text {
+    font-size: 14px !important;
+    letter-spacing: 1.1px;
+  }
+  .contactCom_btn {
+    justify-content: center;
+    width: 200px;
+    font-size: 16px;
+    height: 49px;
+  }
+  .contactCom_btn {
+    justify-content: center;
+    width: 170px;
+    font-size: 14px;
+    height: 45px;
+  }
+  .contactCom_btn span {
+    width: 80%;
+    font-family: "Space Grotesk", sans-serif;
+    font-size: 15px;
+    letter-spacing: 1.1px;
+  }
+}
+
+@media screen and (min-width: 600px) and (max-width: 768px) {
+  .contactInfoDetail {
+    padding: 20px 32px;
+  }
+  .contact_com_text {
+    font-size: 16px !important;
+    letter-spacing: 1.1px;
+  }
+  .contactCom_btn {
+    justify-content: center;
+    width: 200px;
+    font-size: 16px;
+    height: 49px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .contact_com_text {
+    font-size: 18px !important;
+    letter-spacing: 1.1px;
+  }
+  .contactCom_btn {
+    justify-content: center;
+    width: 200px;
+    font-size: 16px;
+    height: 49px;
+  }
+  .contactCom_instantMsg {
+    width: 70px;
+    height: 70px;
+  }
+}

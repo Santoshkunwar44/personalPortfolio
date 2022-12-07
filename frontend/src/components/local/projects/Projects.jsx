@@ -75,8 +75,8 @@ const Projects = () => {
                         <h1> <span style={{ fontSize: '2rem' }}>THE</span> PROJECTS</h1>
 
                     </div>
-                    <p>Some of My projects  with different technologies Nodejs , React , Python , Django </p>
-                    <p>Click in the project and visit the website & get the source code of the project .</p>
+                    <p>Some of My projects  with different technologies Nodejs , React , Python , Django
+                        Click in the project and visit the website & get the source code of the project .</p>
 
 
                 </div>

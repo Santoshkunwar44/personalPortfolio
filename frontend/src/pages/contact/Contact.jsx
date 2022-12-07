@@ -5,6 +5,7 @@ import SimCardDownloadIcon from '@mui/icons-material/SimCardDownload';
 import "./contact.css"
 import ContactFrom from './ContactFrom'
 import { motion } from "framer-motion"
+import Toast from '../../components/local/toast/Toast';
 
 const Contact = () => {
     return (

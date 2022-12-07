@@ -5,6 +5,7 @@
   background-color: rgb(244, 247, 250);
   padding-bottom: 16rem;
   border-radius: 15px 15px 0 0;
+  gap: 1rem;
 }
 .footer_wrapper {
   max-width: 1024px;
@@ -39,4 +40,37 @@ li:hover {
 .footer_social_media_wrapper {
   display: flex;
   margin-bottom: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-bottom: 10rem;
+  }
+  .left li,
+  .mid li,
+  .right li {
+    color: rgba(0, 0, 0, 0.89);
+    cursor: pointer;
+    font-family: var(--poppins);
+    letter-spacing: 1.04px;
+    margin-bottom: 1.7rem;
+    cursor: pointer;
+    font-size: 11px;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    margin-bottom: 10rem;
+  }
+  .left li,
+  .mid li,
+  .right li {
+    color: rgba(0, 0, 0, 0.89);
+    cursor: pointer;
+    font-family: var(--poppins);
+    letter-spacing: 1.04px;
+    margin-bottom: 1.7rem;
+    cursor: pointer;
+    font-size: 14px;
+  }
 }

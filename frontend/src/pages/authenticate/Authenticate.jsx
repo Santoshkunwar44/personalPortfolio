@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux"
 import { loginApi } from "../../utility/urls/auth"
 import { useNavigate } from "react-router-dom"
 import "./authenticate.css"
+import { setToastInfo } from "../../redux/action/utilityAction"
 const Authenticate = () => {
 
 
@@ -22,7 +23,9 @@ const Authenticate = () => {
             console.log(data)
             navigate("/")
             dispatch({ type: "SAVE_USER_DATA", data: data.message })
+            dispatch(setToastInfo({ title: "Login Successfull", desc: "You are loggedin successfully", type: "success" }))
         } catch (error) {
+            dispatch(setToastInfo({ title: "Login Failed", desc: "Something Went wrong", type: "error" }))
             console.log(error)
         }
     }

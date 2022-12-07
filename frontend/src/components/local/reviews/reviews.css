@@ -9,10 +9,9 @@
 }
 
 .reviewsLeft {
-  background: #f7f7f7;
-  box-shadow: rgb(50 50 93 / 25%) 0px 3px 12px -2px,
-    rgb(0 0 0 / 30%) 2px 0px 7px -3px;
   flex: 5 !important;
+  padding: 1rem;
+  box-sizing: border-box;
 }
 
 .reviews_header {
@@ -49,22 +48,23 @@
   width: 100%;
 }
 .reviewsRight {
-  padding: 1rem;
   padding-top: 0;
-  flex: 7 !important;
+  flex: 6 !important;
 }
-.reviewsRight p {
+.reviewsLeft p {
   margin-bottom: 1rem;
-  color: gray;
+  color: rgba(128, 128, 128, 0.815);
   line-height: 30px;
   text-align: start;
-  font-weight: 400;
-  font-weight: 100 !important;
-  font-family: "poppins";
+  font-weight: 0 !important;
+  font-family: "Space Grotesk", sans-serif;
   font-size: 14px;
 }
 .reviewsImage {
   margin-top: 2rem;
+}
+.reviewsImage img {
+  object-fit: cover !important;
 }
 .fiverBtn {
   display: flex;
@@ -90,7 +90,22 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 768px) {
+  .reviewsLeft {
+    display: none;
+  }
+  .reviews_header {
+    padding-bottom: 0.8rem;
+    padding-top: 0.8rem;
+    color: rgba(5, 5, 66, 0.959);
+  }
+}
+
 @media screen and (max-width: 1024px) {
+  .reviews_header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 1.1px;
+  }
   .reviewsRight p {
     font-size: 11px;
     line-height: 24px;
